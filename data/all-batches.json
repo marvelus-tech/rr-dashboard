@@ -6645,6 +6645,227 @@
           "web_prompt": "# Lead Generation Website Build \u2014 Grease trap cleaning in Surprise AZ\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Grease trap cleaning** targeting **Surprise AZ**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$1,300**.\n\n## Target Market\n- **Location:** Surprise AZ\n- **Service:** Grease trap cleaning\n- **Average Job Value:** $650\n- **Urgency Level:** 4/10 (Standard \u2014 24-48hr response)\n- **Page Type:** professional_service\n\n## Primary Keywords to Target\n- Main: \"Grease trap cleaning Surprise AZ\"\n- Secondary: \"best Grease trap cleaning near me\", \"Grease trap cleaning company Surprise AZ\", \"affordable Grease trap cleaning Surprise AZ\"\n- Long-tail: \"Grease trap cleaning cost Surprise AZ\", \"Grease trap cleaning reviews Surprise AZ\", \"how much does Grease trap cleaning cost in Surprise AZ\"\n\n## Domain\n**Primary:** greasetrapcleaningsurpriseaz.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in Surprise AZ\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Grease trap cleaning in Surprise AZ\" + subheadline with benefit + 2 CTAs (Free Consultation / Get Started)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** Credentials, testimonials, process explanation, FAQ section\n- **Urgency:** Same Day Appointments Available\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with Surprise AZ address\n- **H1:** Exactly \"Grease trap cleaning Surprise AZ\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /grease-trap-cleaning-surprise-az/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for Surprise AZ\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to greasetrapcleaningsurpriseaz.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Grease trap cleaning cost in Surprise AZ?\"\n  2. \"How long does Grease trap cleaning take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Grease trap cleaning?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $1,300/month from client\n\nThis is a recurring service \u2014 include a subscription/membership CTA option.\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)"
         }
       ]
+    },
+    {
+      "date": "2026-05-29",
+      "week": 14,
+      "opportunities": [
+        {
+          "niche": "Flood damage restoration",
+          "city": "Werribee VIC",
+          "avg_job_value": 4800,
+          "lead_value": 480,
+          "monthly_fee": 3840,
+          "urgency": 9,
+          "urgency_reason": "Emergency water ingress creates same-day conversion intent and high close rates.",
+          "recurring": false,
+          "opportunity_score": 8.1,
+          "priority": "Start Now",
+          "status": "New",
+          "notes": "SERP shows multiple thin exact-match suburb pages with weak branding and low trust signals.",
+          "location_reasoning": "Werribee is one of Melbourne\u2019s fastest-growth corridors with high residential stock exposure and frequent storm/flood incidents. Local intent is strong but SERP incumbents are mostly small operators with low-authority pages.",
+          "domain_suggestions": [
+            "werribeefloodrestoration.com.au",
+            "flooddamagewerribee.com.au",
+            "emergencyfloodwerribee.com.au"
+          ],
+          "action_plan": [
+            "Build Werribee-focused emergency LP + suburb service silos (Hoppers Crossing, Tarneit, Point Cook).",
+            "Publish 6 authority posts (insurance claims, burst pipe checklist, mould prevention) + schema.",
+            "Acquire 12 local links/citations (plumbers, strata, chambers) and push Google Business profile assets."
+          ],
+          "web_prompt": "Build and rank a conversion-first lead-gen site for Flood Damage Restoration in Werribee VIC with suburb silos, emergency CTAs, and local proof.",
+          "seo": {
+            "search_volume": 140,
+            "keyword_difficulty": 22,
+            "competition_level": "Low",
+            "backlink_estimate": "Weak (15-55)",
+            "map_pack_status": "Weak",
+            "competitor_da": 19,
+            "top_competitor_da": [
+              12,
+              19,
+              24
+            ],
+            "content_gap_score": 84,
+            "seo_opportunity_score": 78,
+            "data_source": "manual SERP + AU local keyword estimate (2026-05-29)",
+            "verification_needed": true
+          }
+        },
+        {
+          "niche": "Commercial pest control",
+          "city": "Geelong VIC",
+          "avg_job_value": 3200,
+          "lead_value": 320,
+          "monthly_fee": 3520,
+          "urgency": 6,
+          "urgency_reason": "B2B compliance + hygiene pressure generates persistent lead flow and recurring contracts.",
+          "recurring": true,
+          "opportunity_score": 7.8,
+          "priority": "Start Now",
+          "status": "New",
+          "notes": "Results include single-service pages with light content; several competitors rely on broad homepages instead of focused B2B pages.",
+          "location_reasoning": "Geelong has dense hospitality, logistics, and food-service businesses needing routine pest contracts. Market has demand depth but fragmented digital execution among providers.",
+          "domain_suggestions": [
+            "geelongcommercialpestcontrol.com.au",
+            "pestcontrolgeelongcommercial.com.au",
+            "geelongpestcontracts.com.au"
+          ],
+          "action_plan": [
+            "Launch industry landing pages (restaurants, warehouses, aged care, offices) with compliance messaging.",
+            "Create contract calculator + downloadable pest audit checklist to capture B2B leads.",
+            "Build citations/reviews from Geelong business directories and industry associations."
+          ],
+          "web_prompt": "Create a B2B-focused local SEO site for Commercial Pest Control in Geelong VIC targeting contract-based recurring revenue.",
+          "seo": {
+            "search_volume": 110,
+            "keyword_difficulty": 24,
+            "competition_level": "Low",
+            "backlink_estimate": "Weak (20-60)",
+            "map_pack_status": "Weak",
+            "competitor_da": 22,
+            "top_competitor_da": [
+              16,
+              22,
+              28
+            ],
+            "content_gap_score": 79,
+            "seo_opportunity_score": 74,
+            "data_source": "manual SERP + AU local keyword estimate (2026-05-29)",
+            "verification_needed": true
+          }
+        },
+        {
+          "niche": "Asbestos removal",
+          "city": "Ballarat VIC",
+          "avg_job_value": 9000,
+          "lead_value": 900,
+          "monthly_fee": 4500,
+          "urgency": 7,
+          "urgency_reason": "Regulated safety issue with high ticket jobs and urgent homeowner/business decision windows.",
+          "recurring": false,
+          "opportunity_score": 7.5,
+          "priority": "Research Further",
+          "status": "New",
+          "notes": "SERP includes directory/ad clutter and a few thin location pages; authority is moderate but local topical depth is shallow.",
+          "location_reasoning": "Ballarat has large pre-1990 housing stock and renovation activity, increasing asbestos demand. Regional market less saturated than inner Melbourne.",
+          "domain_suggestions": [
+            "ballaratasbestosremoval.com.au",
+            "asbestosremovalballaratvic.com.au",
+            "ballaratasbestosservices.com.au"
+          ],
+          "action_plan": [
+            "Publish compliance-first pages: testing, removal, disposal, clearance certificates.",
+            "Add suburb coverage pages (Sebastopol, Wendouree, Delacombe) with case-study proof.",
+            "Earn local authority links from builders, renovators, and community directories."
+          ],
+          "web_prompt": "Develop a trust-first lead-gen website for Asbestos Removal in Ballarat VIC with regulation-focused content and conversion pathways.",
+          "seo": {
+            "search_volume": 95,
+            "keyword_difficulty": 29,
+            "competition_level": "Medium",
+            "backlink_estimate": "Moderate (40-90)",
+            "map_pack_status": "2-3 Listings",
+            "competitor_da": 27,
+            "top_competitor_da": [
+              21,
+              27,
+              33
+            ],
+            "content_gap_score": 72,
+            "seo_opportunity_score": 68,
+            "data_source": "manual SERP + AU local keyword estimate (2026-05-29)",
+            "verification_needed": true
+          }
+        },
+        {
+          "niche": "Grease trap cleaning",
+          "city": "Dandenong VIC",
+          "avg_job_value": 1400,
+          "lead_value": 140,
+          "monthly_fee": 2240,
+          "urgency": 6,
+          "urgency_reason": "Food premises are compliance-driven and need repeat servicing; strong recurring revenue potential.",
+          "recurring": true,
+          "opportunity_score": 7.2,
+          "priority": "Research Further",
+          "status": "New",
+          "notes": "Current SERP leans Melbourne-wide pages with weak Dandenong-specific intent capture.",
+          "location_reasoning": "Dandenong has high concentration of food manufacturing, hospitality and industrial kitchens, making recurring grease trap demand durable.",
+          "domain_suggestions": [
+            "dandenonggreasetrapcleaning.com.au",
+            "greasetrapcleaningdandenong.com.au",
+            "south-eastgreasetraps.com.au"
+          ],
+          "action_plan": [
+            "Build Dandenong-first service page plus industry-specific pages (cafes, restaurants, factories).",
+            "Deploy recurring-service CTA and maintenance plan comparison blocks.",
+            "Win commercial links from local food business groups and suppliers."
+          ],
+          "web_prompt": "Rank a local B2B lead site for Grease Trap Cleaning in Dandenong VIC focused on recurring contract enquiries.",
+          "seo": {
+            "search_volume": 70,
+            "keyword_difficulty": 18,
+            "competition_level": "Low",
+            "backlink_estimate": "Weak (10-40)",
+            "map_pack_status": "Empty or Weak",
+            "competitor_da": 17,
+            "top_competitor_da": [
+              11,
+              17,
+              23
+            ],
+            "content_gap_score": 86,
+            "seo_opportunity_score": 73,
+            "data_source": "manual SERP + AU local keyword estimate (2026-05-29)",
+            "verification_needed": true
+          }
+        },
+        {
+          "niche": "Emergency electrician",
+          "city": "Frankston VIC",
+          "avg_job_value": 950,
+          "lead_value": 95,
+          "monthly_fee": 2280,
+          "urgency": 9,
+          "urgency_reason": "After-hours power faults convert immediately; strong call-driven intent and high urgency.",
+          "recurring": false,
+          "opportunity_score": 7.0,
+          "priority": "Research Further",
+          "status": "New",
+          "notes": "SERP contamination from irrelevant Texas pages indicates local intent/result mismatch and exploitable content gap.",
+          "location_reasoning": "Frankston has dense residential stock with strong after-hours electrical demand and easier SEO entry than inner Melbourne CBD terms.",
+          "domain_suggestions": [
+            "frankstonemergencyelectrician.com.au",
+            "247electricianfrankston.com.au",
+            "afterhourselectricianfrankston.com.au"
+          ],
+          "action_plan": [
+            "Create mobile-first emergency call page with suburb-based proof and response-time guarantees.",
+            "Publish high-intent incident pages (switchboard faults, power outage, burning smell).",
+            "Build rapid citation set and local PR mentions to improve map pack entry."
+          ],
+          "web_prompt": "Build a call-conversion local SEO site for Emergency Electrician in Frankston VIC optimized for after-hours lead capture.",
+          "seo": {
+            "search_volume": 125,
+            "keyword_difficulty": 31,
+            "competition_level": "Medium",
+            "backlink_estimate": "Moderate (35-100)",
+            "map_pack_status": "2-3 Listings",
+            "competitor_da": 26,
+            "top_competitor_da": [
+              18,
+              26,
+              34
+            ],
+            "content_gap_score": 75,
+            "seo_opportunity_score": 66,
+            "data_source": "manual SERP + AU local keyword estimate (2026-05-29)",
+            "verification_needed": true
+          }
+        }
+      ]
     }
   ]
 }
