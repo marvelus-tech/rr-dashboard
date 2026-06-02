@@ -510,17 +510,17 @@ def calculate_opportunity_score(niche, city, estimated_leads=50, seo_metrics=Non
     urgency_score = urgency / 10
     
     # REVISED Kyle weights (less dominated by job value):
-    # Lead Value (2.0x) + Low Competition (2.5x) + Traffic (1.5x) + Urgency (1.5x)
+    # Lead Value (1.5x) + Low Competition (2.5x) + Traffic (2.0x) + Urgency (1.5x)
     # Competition and traffic matter MORE than extreme job values
     composite_score = (
-        (lead_value_score * 2.0) +
+        (lead_value_score * 1.5) +
         (competition_score * 2.5) +
-        (traffic_score * 1.5) +
+        (traffic_score * 2.0) +
         (urgency_score * 1.5)
     ) * location_fit  # Apply location fit penalty/boost
     
     # Normalize to 0-100 scale and round
-    opportunity_score = min(100, max(0, round(composite_score * 2.0, 1)))
+    opportunity_score = min(100, max(0, round(composite_score * 1.8, 1)))
     
     # Priority classification based on score
     if opportunity_score >= 75:
