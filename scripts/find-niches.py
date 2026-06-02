@@ -253,6 +253,51 @@ NICHE_DATABASE = {
 }
 
 # US mid-size cities (50K-500K) — curated for opportunity
+# Cities with demographics mismatched to senior services
+YOUNG_CITIES = {
+    "Aurora IL", "Aurora CO", "Irvine CA", "Plano TX", "Frisco TX", 
+    "Gilbert AZ", "Chandler AZ", "Peoria AZ", "Cary NC", "Overland Park KS",
+    "Sioux Falls SD", "Provo UT", "Orem UT", "Lehi UT", "Boulder CO",
+    "Cambridge MA", "Ann Arbor MI", "Madison WI", "Columbia MO", "College Station TX"
+}
+
+# Primarily residential suburbs — weak for B2B services
+RESIDENTIAL_SUBURBS = {
+    "Blue Mountains NSW", "Blacktown NSW", "Penrith NSW", "Campbelltown NSW",
+    "Frankston VIC", "Mornington VIC", "Berwick VIC", "Craigieburn VIC",
+    "Gold Coast QLD", "Sunshine Coast QLD", "Mandurah WA", "Albany WA"
+}
+
+# Major freight corridors (good for trucking-related niches)
+FREIGHT_CORRIDORS = {
+    "Penrith NSW", "Wagga Wagga NSW", "Dubbo NSW", "Albury NSW",
+    "Wodonga VIC", "Ballarat VIC", "Bendigo VIC", "Shepparton VIC",
+    "Toowoomba QLD", "Ipswich QLD", "Geraldton WA", "Kalgoorlie WA"
+}
+
+# Small city markets (<50K pop) where B2B demand can be structurally weaker
+SMALL_CITIES = {
+    "Burnie TAS", "Devonport TAS", "Mount Gambier SA", "Victor Harbor SA",
+    "Yass NSW", "Goulburn NSW", "Katherine NT", "Alice Springs NT",
+    "Palmerston NT", "Barossa Valley SA", "Albany WA", "Bunbury WA"
+}
+
+# Newer-build growth markets with lower foundation repair demand
+NEW_CONSTRUCTION_CITIES = {
+    "Irvine CA", "Plano TX", "Frisco TX", "Gilbert AZ", "Chandler AZ",
+    "Surprise AZ", "West Jordan UT", "Lehigh Acres FL", "League City TX",
+    "Sugar Land TX", "Carmel IN"
+}
+
+# Retirement destinations (good for senior services)
+RETIREMENT_CITIES = {
+    "The Villages FL", "Prescott AZ", "Sarasota FL", "Naples FL", 
+    "Scottsdale AZ", "St. George UT", "Asheville NC", "Myrtle Beach SC",
+    "Venice FL", "Ocala FL", "Port St. Lucie FL", "Cape Coral FL",
+    "Hialeah FL", "Miami Gardens FL", "Hollywood FL", "Pembroke Pines FL",
+    "Sunrise FL", "Deerfield Beach FL", "Boynton Beach FL", "Delray Beach FL"
+}
+
 CITIES = [
     # Suburbs of major metros
     "Fort Worth TX", "Mesa AZ", "Aurora CO", "Arlington TX", "Anaheim CA",
@@ -307,23 +352,22 @@ CITIES = [
     "Palmerston NT", "Katherine NT", "Alice Springs NT",
 ]
 
-def calculate_opportunity_score(niche, estimated_leads=50, seo_metrics=None):
-    """Calculate opportunity score using enhanced Kyle framework.
-    
-    Kyle Scoring Weights:
-    - Lead Value: 2.5x
-    - Low Competition: 2.0x (inverted KD)
-    - Traffic: 1.0x
+def calculate_opportunity_score(niche, city, estimated_leads=50, seo_metrics=None):
+    """Calculate opportunity score using weighted market-fit scoring.
+
+    Weights:
+    - Lead Value: 2.0x
+    - Low Competition: 2.5x (inverted KD)
+    - Traffic: 1.5x
     - Urgency: 1.5x
     """
     avg_value = niche["avg_value"]
     urgency = niche["urgency"]
-    recurring = 1.5 if niche["recurring"] else 1.0
-    
+
     # Lead value calculation (Kyle's formula simplified)
     # Assume 30% close rate, 3 leads per job
     lead_value = (avg_value * 0.30) / 3
-    
+
     # Adjust estimated leads based on job value (higher ticket = fewer leads)
     if avg_value > 20000:
         estimated_leads = 10  # High ticket, low volume
@@ -333,48 +377,157 @@ def calculate_opportunity_score(niche, estimated_leads=50, seo_metrics=None):
         estimated_leads = 35  # Medium ticket
     else:
         estimated_leads = 50  # Low ticket, high volume
-    
+
     monthly_fee = lead_value * estimated_leads * 0.4  # 40% of value
-    
-    # Cap monthly fee at realistic range ($300-$5000)
-    monthly_fee = max(300, min(monthly_fee, 5000))
-    
-    # Enhanced Kyle Framework Scoring (0-100 scale)
-    # Lead Value Score: $20K = 10, $2K = 1
+
+    # Cap monthly fee at realistic R&R range
+    monthly_fee = max(300, min(monthly_fee, 2500))
+
+    # Lead Value Score: $20K = 10, $2K = 1 (capped)
     lead_value_score = min(10, avg_value / 2000)
+
+    # Location-Industry Fit Penalty
+    location_fit = 1.0
+    niche_name_lower = niche["name"].lower()
+    city_lower = city.lower()
+
+    # B2B in small cities or residential suburbs = weak fit
+    b2b_keywords = [
+        "cybersecurity", "fractional cfo", "msp", "commercial cleaning", "commercial pest",
+        "business coaching", "payroll", "bookkeeping", "it support", "records management",
+        "fleet washing", "commercial", "industrial", "b2b"
+    ]
+    if any(x in niche_name_lower for x in b2b_keywords) or niche.get("b2b", False):
+        # Check if city is small (<50K pop) or residential suburb
+        small_cities = [
+            "palmerston", "lewisville", "frankston", "mornington", "berwick", "craigieburn",
+            "mandurah", "albany", "gawler", "victor harbor", "bunbury", "geraldton",
+            "kalgoorlie", "toowoomba", "ipswich", "shepparton", "wodonga", "warrnambool"
+        ]
+        if any(x in city_lower for x in small_cities) or city in RESIDENTIAL_SUBURBS:
+            location_fit = 0.4
+            penalty_reason = "B2B niche in small city or residential suburb"
+        elif any(x in city_lower for x in ["dallas", "houston", "chicago", "new york", "los angeles", "san francisco", "boston", "seattle", "denver", "atlanta", "austin", "phoenix", "miami"]):
+            location_fit = 1.2
+            penalty_reason = "B2B niche in major metro business district"
     
-    # Competition Score: Get KD from SEO metrics if available
-    kd = 25  # Default moderate difficulty
-    if seo_metrics:
-        kd = seo_metrics.get("keyword_difficulty", 25)
-    competition_score = max(0, 11 - (kd / 10))  # KD 10 = 10, KD 50 = 6
+    # Trucking attorney needs freight corridors
+    if any(word in niche_name_lower for word in ["trucking", "truck"]):
+        if any(x in city_lower for x in ["mountain", "blue mountains", "coast", "beach", "village"]):
+            location_fit = 0.2
+        elif not any(x in city_lower for x in ["wagga", "dubbo", "albury", "ballarat", "bendigo", "toowoomba", "ipswich", "geraldton", "kalgoorlie"]):
+            location_fit = 0.5
+    
+    # Senior services need retirement cities
+    if any(x in niche_name_lower for x in ["walk-in tub", "stairlift", "senior", "aging", "accessibility", "walk-in shower", "bathroom accessibility"]):
+        if any(x in city_lower for x in ["aurora il", "denton tx", "irvine", "plano", "frisco", "gilbert", "chandler", "madison", "columbia", "college station"]):
+            location_fit = 0.3
+        elif any(x in city_lower for x in ["hialeah", "naples", "sarasota", "prescott", "the villages", "st. george", "myrtle beach", "venice", "ocala", "port st. lucie", "cape coral"]):
+            location_fit = 1.2
+    
+    # Foundation repair needs older housing
+    if "foundation" in niche_name_lower:
+        if any(x in city_lower for x in ["irvine", "plano", "frisco", "gilbert", "chandler", "new"]):
+            location_fit = 0.6
+    
+    # Water damage needs flood-prone areas
+    if any(x in niche_name_lower for x in ["water damage", "storm damage", "flood"]):
+        if any(x in city_lower for x in ["desert", "phoenix", "tucson", "vegas"]):
+            location_fit = 0.4
+    
+    # Home battery backup needs solar-friendly cities
+    if "home battery" in niche_name_lower or "battery backup" in niche_name_lower:
+        if any(x in city_lower for x in ["seattle", "portland", "chicago", "detroit", "minneapolis"]):
+            location_fit = 0.5
+    
+    # Backflow testing, grease trap, energy audit = near-zero search volume, compliance-driven
+    if any(x in niche_name_lower for x in ["backflow testing", "backflow inspection", "grease trap", "energy audit", "energy assessment"]):
+        location_fit = 0.2
+        penalty_reason = "Compliance-driven market, not search-driven"
+    
+    # Smart thermostat = DIY dominates, oversaturated
+    if any(x in niche_name_lower for x in ["smart thermostat", "thermostat installation"]):
+        location_fit = 0.3
+        penalty_reason = "DIY dominates, HVAC upsell, not standalone"
+    
+    # At-home pet euthanasia = crisis = call vet, not Google
+    if any(x in niche_name_lower for x in ["at-home pet euthanasia", "home pet euthanasia"]):
+        location_fit = 0.3
+        penalty_reason = "Crisis moment = call vet, not Google search"
+    
+    # Home battery backup needs solar-friendly cities (not just any city)
+    if "home battery" in niche_name_lower or "battery backup" in niche_name_lower:
+        if any(x in city_lower for x in ["seattle", "portland", "chicago", "detroit", "minneapolis", "boston", "new york"]):
+            location_fit = 0.3
+            penalty_reason = "Low solar adoption city"
+        elif any(x in city_lower for x in ["phoenix", "tucson", "las vegas", "austin", "san diego", "los angeles", "miami", "tampa", "orlando", "denver", "salt lake"]):
+            location_fit = 1.2
+            penalty_reason = "High solar adoption city"
+    
+    # Solar panel installation needs solar-friendly climate
+    if "solar panel" in niche_name_lower or "solar installation" in niche_name_lower:
+        if any(x in city_lower for x in ["seattle", "portland", "chicago", "detroit", "minneapolis", "boston", "new york", "cleveland", "pittsburgh"]):
+            location_fit = 0.5
+            penalty_reason = "Low solar irradiance, poor ROI"
+        elif any(x in city_lower for x in ["phoenix", "tucson", "las vegas", "austin", "san diego", "los angeles", "miami", "tampa", "orlando", "denver", "salt lake", "fresno", "bakersfield", "riverside", "stockton", "modesto", "visalia", "merced"]):
+            location_fit = 1.2
+            penalty_reason = "High solar irradiance, strong incentives"
+    
+    # Lawn aeration = seasonal upsell, not standalone
+    if any(x in niche_name_lower for x in ["lawn aeration", "lawn aerating", "core aeration"]):
+        location_fit = 0.3
+        penalty_reason = "Seasonal upsell, every lawn company offers this"
+    
+    # Hot tub repair = seasonal, bundled with pool services
+    if any(x in niche_name_lower for x in ["hot tub repair", "hot tub service", "spa repair"]):
+        location_fit = 0.4
+        penalty_reason = "Seasonal, bundled with pool services"
+    
+    # Grab bar installation = low ticket, remodel add-on
+    if any(x in niche_name_lower for x in ["grab bar installation", "grab bar install", "shower grab bar"]):
+        location_fit = 0.4
+        penalty_reason = "Low ticket, usually bundled with larger remodel"
+    
+    # Home elevator = tiny market, massive liability
+    if any(x in niche_name_lower for x in ["home elevator", "residential elevator", "house elevator"]):
+        location_fit = 0.3
+        penalty_reason = "Tiny market, 6-12 month sales cycle, high liability"
+    
+    # LED retrofit = B2B relationship-driven
+    if any(x in niche_name_lower for x in ["led retrofit", "led lighting retrofit", "commercial led"]):
+        location_fit = 0.5
+        penalty_reason = "B2B relationship-driven, not search-driven"
+    
+    # Competition Score: KD 10 = 10, KD 50 = 6 (inverted — lower is better)
+    kd = seo_metrics.get("keyword_difficulty", 25) if seo_metrics else 25
+    competition_score = max(0, 11 - (kd / 10))
     
     # Traffic Score: 150 searches = 10, 30 = 2
-    search_volume = 50  # Default
-    if seo_metrics:
-        search_volume = seo_metrics.get("search_volume", 50)
+    search_volume = seo_metrics.get("search_volume", 50) if seo_metrics else 50
     traffic_score = min(10, search_volume / 15)
     
     # Urgency Score: 10 = 1.0, 5 = 0.5
     urgency_score = urgency / 10
     
-    # Composite Score with Kyle weights
+    # REVISED Kyle weights (less dominated by job value):
+    # Lead Value (2.0x) + Low Competition (2.5x) + Traffic (1.5x) + Urgency (1.5x)
+    # Competition and traffic matter MORE than extreme job values
     composite_score = (
-        (lead_value_score * 2.5) +
-        (competition_score * 2.0) +
-        (traffic_score * 1.0) +
+        (lead_value_score * 2.0) +
+        (competition_score * 2.5) +
+        (traffic_score * 1.5) +
         (urgency_score * 1.5)
-    )
+    ) * location_fit  # Apply location fit penalty/boost
     
     # Normalize to 0-100 scale and round
-    opportunity_score = min(100, max(0, round(composite_score * 2.5, 1)))
+    opportunity_score = min(100, max(0, round(composite_score * 2.0, 1)))
     
     # Priority classification based on score
-    if opportunity_score >= 70:
+    if opportunity_score >= 75:
         priority = "Start Now"
-    elif opportunity_score >= 50:
+    elif opportunity_score >= 55:
         priority = "Research Further"
-    elif opportunity_score >= 30:
+    elif opportunity_score >= 35:
         priority = "Monitor"
     else:
         priority = "Low Priority"
@@ -385,14 +538,17 @@ def calculate_opportunity_score(niche, estimated_leads=50, seo_metrics=None):
         "opportunity_score": opportunity_score,
         "estimated_leads": estimated_leads,
         "priority": priority,
+        "location_fit": location_fit,
         "kyle_breakdown": {
             "lead_value_score": round(lead_value_score, 1),
             "competition_score": round(competition_score, 1),
             "traffic_score": round(traffic_score, 1),
             "urgency_score": round(urgency_score, 1),
+            "location_fit": location_fit,
             "composite_raw": round(composite_score, 1)
         }
     }
+
 
 def generate_web_prompt(niche_name, city_name, avg_value, urgency, recurring, domain, monthly_fee, seo_metrics):
     """Generate a detailed web development prompt for an AI developer."""
@@ -628,12 +784,32 @@ def find_opportunities(category=None, count=5, include_australian=False):
         niche = niches[i]
         city = cities[i % len(cities)]
         
+        # Skip niches that are known time-wasters (compliance-driven, DIY-dominated, etc.)
+        skip_niches = [
+            "backflow testing", "backflow inspection", "grease trap", "grease trap cleaning",
+            "energy audit", "energy assessment", "smart thermostat", "thermostat installation",
+            "at-home pet euthanasia", "home pet euthanasia", "lawn aeration", "lawn aerating",
+            "core aeration", "hot tub repair", "hot tub service", "spa repair",
+            "grab bar installation", "grab bar install", "shower grab bar",
+            "home elevator", "residential elevator", "house elevator",
+            "led retrofit", "led lighting retrofit", "commercial led"
+        ]
+        if any(x in niche["name"].lower() for x in skip_niches):
+            continue
+        
         # Add SEO metrics (estimated based on niche characteristics)
         # In production, these would come from Ahrefs/Mangools API
         seo_metrics = calculate_seo_metrics(niche, city)
         
         # Calculate opportunity score with SEO metrics (enhanced Kyle framework)
-        calc = calculate_opportunity_score(niche, seo_metrics=seo_metrics)
+        calc = calculate_opportunity_score(niche, city=city, seo_metrics=seo_metrics)
+        if calc is None:
+            continue
+        
+        # Skip low-priority opportunities (score < 50)
+        if calc["opportunity_score"] < 50:
+            continue
+        
         domains = generate_domain_suggestion(niche["name"], city)
         
         # Generate web development prompt
