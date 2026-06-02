@@ -1732,7 +1732,7 @@
       "opportunities": [
         {
           "niche": "Fire alarm installation",
-          "city": "North Las Vegas NV",
+          "city": "Henderson NV",
           "avg_job_value": 27500,
           "lead_value": 2750.0,
           "monthly_fee": 2500,
@@ -1743,15 +1743,14 @@
           "status": "New",
           "notes": "Code",
           "domain_suggestions": [
-            "firealarminstallationnorthlasvegasnv.com",
-            "northlasvegasnvfirealarminstallation.com",
-            "firealarminstallation-northlasvegasnv.com"
+            "firealarminstallationhendersonnv.com",
+            "hendersonfirealarminstallers.com",
+            "hendersonfiresecurity.com"
           ],
           "action_plan": [
-            "5/10",
-            "Search Google for 'Fire alarm installation North Las Vegas NV' \u2014 verify competition",
-            "Check domain availability: firealarminstallationnorthlasvegasnv.com",
-            "If green light: build site + get ranking"
+            "1. Search Google for 'fire alarm installation Henderson NV' \u2014 verify competition",
+            "2. Check domain availability: hendersonfirealarminstallers.com",
+            "3. If green light: build site + get ranking"
           ],
           "seo": {
             "search_volume": 62,
@@ -1774,7 +1773,8 @@
             "urgency_score": 0.5,
             "location_fit": 1.0,
             "composite_raw": 42.0
-          }
+          },
+          "location_reasoning": ""
         },
         {
           "niche": "Payroll services",
@@ -7432,7 +7432,7 @@
         },
         {
           "niche": "Stairlift installation",
-          "city": "Hialeah FL",
+          "city": "The Villages FL",
           "avg_job_value": 6500,
           "lead_value": 650.0,
           "monthly_fee": 2500,
@@ -7443,48 +7443,16 @@
           "priority": "Research Further",
           "status": "New",
           "notes": "Medicare",
-          "location_reasoning": "Hialeah FL sits in the Mid-size market (~100K-350K) where rank-and-rent performs best. Current market signal is medium competition (top competitor DA ~17, map pack: 2-3 Listings), which indicates an underserved or weak-incumbent opening for stairlift installation leads. City fit: balanced demand without major-metro SEO saturation.",
+          "location_reasoning": "The Villages FL sits in the Mid-size market (~100K-350K) where rank-and-rent performs best. Current market signal is medium competition (top competitor DA ~17, map pack: 2-3 Listings), which indicates an underserved or weak-incumbent opening for stairlift installation leads. City fit: balanced demand without major-metro SEO saturation.",
           "domain_suggestions": [
-            "stairliftinstallationhialeahfl.com",
-            "hialeahflstairliftinstallation.com",
-            "stairliftinstallation-hialeahfl.com"
+            "stairliftsthevillagesfl.com",
+            "thevillagesstairlifts.com",
+            "stairliftseniorsfl.com"
           ],
           "action_plan": [
-            "0/10",
-            "Search Google for 'Stairlift installation Hialeah FL' \u2014 verify competition",
-            "Check domain availability: stairliftinstallationhialeahfl.com",
-            "If green light: build site + get ranking",
-            "**Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ",
-            "**Services** \u2014 Detailed service page with pricing context",
-            "**About** \u2014 Company story, credentials, service area",
-            "**Contact** \u2014 Form + phone + map + hours",
-            "**Areas We Serve** \u2014 List of suburbs/neighborhoods in Hialeah FL",
-            "**Blog** \u2014 3-5 seed articles targeting long-tail keywords",
-            "**Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button",
-            "**Hero Section** \u2014 H1: \"Stairlift installation in Hialeah FL\" + subheadline with benefit + 2 CTAs (Free Estimate / Schedule Consultation)",
-            "**Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")",
-            "**Services Grid** \u2014 3-6 service cards with icons",
-            "**Why Choose Us** \u2014 3-4 differentiators with icons",
-            "**Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)",
-            "**FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)",
-            "**CTA Banner** \u2014 Secondary conversion push",
-            "**Footer** \u2014 Full nav + contact + service areas + social links",
-            "1 AA compliant",
-            "\"How much does Stairlift installation cost in Hialeah FL?\"",
-            "\"How long does Stairlift installation take?\"",
-            "\"Do you offer free estimates?\"",
-            "\"Are you licensed and insured?\"",
-            "\"What areas do you serve?\"",
-            "\"Do you offer emergency Stairlift installation?\"",
-            "\"What payment options do you accept?\"",
-            "Complete static website (HTML/CSS/JS)",
-            "Responsive design (mobile-first)",
-            "Contact form with validation",
-            "Google Analytics installed",
-            "Search Console submitted",
-            "LocalBusiness schema markup",
-            "5 blog article drafts (300-500 words each)",
-            "README with deployment instructions"
+            "1. Search Google for 'stairlift installation The Villages FL' \u2014 verify competition",
+            "2. Check domain availability: thevillagesstairlifts.com",
+            "3. If green light: build site + get ranking"
           ],
           "seo": {
             "search_volume": 60,
@@ -7498,7 +7466,7 @@
             "data_source": "estimated",
             "verification_needed": true
           },
-          "web_prompt": "# Lead Generation Website Build \u2014 Stairlift installation in Hialeah FL\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Stairlift installation** targeting **Hialeah FL**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$5,000**.\n\n## Target Market\n- **Location:** Hialeah FL\n- **Service:** Stairlift installation\n- **Average Job Value:** $6,500\n- **Urgency Level:** 4/10 (Standard \u2014 24-48hr response)\n- **Page Type:** installation_service\n\n## Primary Keywords to Target\n- Main: \"Stairlift installation Hialeah FL\"\n- Secondary: \"best Stairlift installation near me\", \"Stairlift installation company Hialeah FL\", \"affordable Stairlift installation Hialeah FL\"\n- Long-tail: \"Stairlift installation cost Hialeah FL\", \"Stairlift installation reviews Hialeah FL\", \"how much does Stairlift installation cost in Hialeah FL\"\n\n## Domain\n**Primary:** stairliftinstallationhialeahfl.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in Hialeah FL\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Stairlift installation in Hialeah FL\" + subheadline with benefit + 2 CTAs (Free Estimate / Schedule Consultation)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** Portfolio gallery, manufacturer certifications, warranty info, financing available\n- **Urgency:** Same Day Appointments Available\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with Hialeah FL address\n- **H1:** Exactly \"Stairlift installation Hialeah FL\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /stairlift-installation-hialeah-fl/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for Hialeah FL\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to stairliftinstallationhialeahfl.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Stairlift installation cost in Hialeah FL?\"\n  2. \"How long does Stairlift installation take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Stairlift installation?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $5,000/month from client\n\n\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)",
+          "web_prompt": "# Lead Generation Website Build \u2014 Stairlift installation in The Villages FL\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Stairlift installation** targeting **The Villages FL**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$5,000**.\n\n## Target Market\n- **Location:** The Villages FL\n- **Service:** Stairlift installation\n- **Average Job Value:** $6,500\n- **Urgency Level:** 4/10 (Standard \u2014 24-48hr response)\n- **Page Type:** installation_service\n\n## Primary Keywords to Target\n- Main: \"Stairlift installation The Villages FL\"\n- Secondary: \"best Stairlift installation near me\", \"Stairlift installation company The Villages FL\", \"affordable Stairlift installation The Villages FL\"\n- Long-tail: \"Stairlift installation cost The Villages FL\", \"Stairlift installation reviews The Villages FL\", \"how much does Stairlift installation cost in The Villages FL\"\n\n## Domain\n**Primary:** stairliftinstallationThe Villagesfl.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in The Villages FL\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Stairlift installation in The Villages FL\" + subheadline with benefit + 2 CTAs (Free Estimate / Schedule Consultation)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** Portfolio gallery, manufacturer certifications, warranty info, financing available\n- **Urgency:** Same Day Appointments Available\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with The Villages FL address\n- **H1:** Exactly \"Stairlift installation The Villages FL\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /stairlift-installation-The Villages-fl/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for The Villages FL\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to stairliftinstallationThe Villagesfl.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Stairlift installation cost in The Villages FL?\"\n  2. \"How long does Stairlift installation take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Stairlift installation?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $5,000/month from client\n\n\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)",
           "location_fit": 1.2,
           "kyle_breakdown": {
             "lead_value_score": 3.2,
