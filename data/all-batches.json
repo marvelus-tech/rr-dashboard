@@ -1404,7 +1404,7 @@
         },
         {
           "niche": "Employment law attorney",
-          "city": "Augusta GA",
+          "city": "Savannah GA",
           "avg_job_value": 27500,
           "lead_value": 2750.0,
           "monthly_fee": 2500,
@@ -1415,15 +1415,14 @@
           "status": "New",
           "notes": "Wrongful term",
           "domain_suggestions": [
-            "employmentlawattorneyaugustaga.com",
-            "augustagaemploymentlawattorney.com",
-            "employmentlawattorney-augustaga.com"
+            "employmentlawsavannahga.com",
+            "savannahemploymentattorney.com",
+            "savannahwrongfultermination.com"
           ],
           "action_plan": [
-            "5/10",
-            "Search Google for 'Employment law attorney Augusta GA' \u2014 verify competition",
-            "Check domain availability: employmentlawattorneyaugustaga.com",
-            "If green light: build site + get ranking"
+            "1. Search Google for 'employment law attorney Savannah GA' \u2014 verify competition",
+            "2. Check domain availability: savannahemploymentattorney.com",
+            "3. If green light: build site + get ranking"
           ],
           "seo": {
             "search_volume": 39,
@@ -1446,7 +1445,8 @@
             "urgency_score": 0.5,
             "location_fit": 1.0,
             "composite_raw": 41.1
-          }
+          },
+          "location_reasoning": ""
         },
         {
           "niche": "Veterans benefits attorney",
@@ -5900,7 +5900,7 @@
       "opportunities": [
         {
           "niche": "Storm damage repair",
-          "city": "Stockton CA",
+          "city": "Sacramento CA",
           "avg_job_value": 6000,
           "lead_value": 600.0,
           "monthly_fee": 2500,
@@ -5911,48 +5911,16 @@
           "priority": "Research Further",
           "status": "New",
           "notes": "Seasonal spikes",
-          "location_reasoning": "Stockton CA sits in the Mid-size market (~100K-350K) where rank-and-rent performs best. Current market signal is low competition (top competitor DA ~16, map pack: Empty or Weak), which indicates an underserved or weak-incumbent opening for storm damage repair leads. City fit: balanced demand without major-metro SEO saturation.",
+          "location_reasoning": "Sacramento CA sits in the Mid-size market (~100K-350K) where rank-and-rent performs best. Current market signal is low competition (top competitor DA ~16, map pack: Empty or Weak), which indicates an underserved or weak-incumbent opening for storm damage repair leads. City fit: balanced demand without major-metro SEO saturation.",
           "domain_suggestions": [
-            "stormdamagerepairstocktonca.com",
-            "stocktoncastormdamagerepair.com",
-            "stormdamagerepair-stocktonca.com"
+            "stormdamagerepairsacramentoca.com",
+            "sacramentostormrestoration.com",
+            "sacramentodamagerepair.com"
           ],
           "action_plan": [
-            "4/10",
-            "Search Google for 'Storm damage repair Stockton CA' \u2014 verify competition",
-            "Check domain availability: stormdamagerepairstocktonca.com",
-            "If green light: build site + get ranking",
-            "**Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ",
-            "**Services** \u2014 Detailed service page with pricing context",
-            "**About** \u2014 Company story, credentials, service area",
-            "**Contact** \u2014 Form + phone + map + hours",
-            "**Areas We Serve** \u2014 List of suburbs/neighborhoods in Stockton CA",
-            "**Blog** \u2014 3-5 seed articles targeting long-tail keywords",
-            "**Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button",
-            "**Hero Section** \u2014 H1: \"Storm damage repair in Stockton CA\" + subheadline with benefit + 2 CTAs (Call Now for Immediate Help / Get a Free Quote)",
-            "**Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")",
-            "**Services Grid** \u2014 3-6 service cards with icons",
-            "**Why Choose Us** \u2014 3-4 differentiators with icons",
-            "**Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)",
-            "**FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)",
-            "**CTA Banner** \u2014 Secondary conversion push",
-            "**Footer** \u2014 Full nav + contact + service areas + social links",
-            "1 AA compliant",
-            "\"How much does Storm damage repair cost in Stockton CA?\"",
-            "\"How long does Storm damage repair take?\"",
-            "\"Do you offer free estimates?\"",
-            "\"Are you licensed and insured?\"",
-            "\"What areas do you serve?\"",
-            "\"Do you offer emergency Storm damage repair?\"",
-            "\"What payment options do you accept?\"",
-            "Complete static website (HTML/CSS/JS)",
-            "Responsive design (mobile-first)",
-            "Contact form with validation",
-            "Google Analytics installed",
-            "Search Console submitted",
-            "LocalBusiness schema markup",
-            "5 blog article drafts (300-500 words each)",
-            "README with deployment instructions"
+            "1. Search Google for 'storm damage repair Sacramento CA' \u2014 verify competition",
+            "2. Check domain availability: sacramentostormrestoration.com",
+            "3. If green light: build site + get ranking"
           ],
           "seo": {
             "search_volume": 118,
@@ -5966,7 +5934,7 @@
             "data_source": "estimated",
             "verification_needed": true
           },
-          "web_prompt": "# Lead Generation Website Build \u2014 Storm damage repair in Stockton CA\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Storm damage repair** targeting **Stockton CA**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$5,000**.\n\n## Target Market\n- **Location:** Stockton CA\n- **Service:** Storm damage repair\n- **Average Job Value:** $6,000\n- **Urgency Level:** 8/10 (Emergency \u2014 immediate response needed)\n- **Page Type:** emergency_service\n\n## Primary Keywords to Target\n- Main: \"Storm damage repair Stockton CA\"\n- Secondary: \"best Storm damage repair near me\", \"Storm damage repair company Stockton CA\", \"affordable Storm damage repair Stockton CA\"\n- Long-tail: \"Storm damage repair cost Stockton CA\", \"Storm damage repair reviews Stockton CA\", \"how much does Storm damage repair cost in Stockton CA\"\n\n## Domain\n**Primary:** stormdamagerepairstocktonca.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in Stockton CA\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Storm damage repair in Stockton CA\" + subheadline with benefit + 2 CTAs (Call Now for Immediate Help / Get a Free Quote)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** 24/7 availability badge, response time guarantee, before/after photos, insurance accepted\n- **Urgency:** 24/7 Emergency Service\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with Stockton CA address\n- **H1:** Exactly \"Storm damage repair Stockton CA\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /storm-damage-repair-stockton-ca/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for Stockton CA\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to stormdamagerepairstocktonca.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Storm damage repair cost in Stockton CA?\"\n  2. \"How long does Storm damage repair take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Storm damage repair?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $5,000/month from client\n\n\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)",
+          "web_prompt": "# Lead Generation Website Build \u2014 Storm damage repair in Sacramento CA\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Storm damage repair** targeting **Sacramento CA**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$5,000**.\n\n## Target Market\n- **Location:** Sacramento CA\n- **Service:** Storm damage repair\n- **Average Job Value:** $6,000\n- **Urgency Level:** 8/10 (Emergency \u2014 immediate response needed)\n- **Page Type:** emergency_service\n\n## Primary Keywords to Target\n- Main: \"Storm damage repair Sacramento CA\"\n- Secondary: \"best Storm damage repair near me\", \"Storm damage repair company Sacramento CA\", \"affordable Storm damage repair Sacramento CA\"\n- Long-tail: \"Storm damage repair cost Sacramento CA\", \"Storm damage repair reviews Sacramento CA\", \"how much does Storm damage repair cost in Sacramento CA\"\n\n## Domain\n**Primary:** stormdamagerepairSacramentoca.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in Sacramento CA\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Storm damage repair in Sacramento CA\" + subheadline with benefit + 2 CTAs (Call Now for Immediate Help / Get a Free Quote)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** 24/7 availability badge, response time guarantee, before/after photos, insurance accepted\n- **Urgency:** 24/7 Emergency Service\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with Sacramento CA address\n- **H1:** Exactly \"Storm damage repair Sacramento CA\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /storm-damage-repair-Sacramento-ca/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for Sacramento CA\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to stormdamagerepairSacramentoca.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Storm damage repair cost in Sacramento CA?\"\n  2. \"How long does Storm damage repair take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Storm damage repair?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $5,000/month from client\n\n\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)",
           "location_fit": 1.0,
           "kyle_breakdown": {
             "lead_value_score": 3.0,
@@ -6216,7 +6184,7 @@
         },
         {
           "niche": "Bathroom accessibility remodel",
-          "city": "Olathe KS",
+          "city": "Overland Park KS",
           "avg_job_value": 20000,
           "lead_value": 2000.0,
           "monthly_fee": 2500,
@@ -6227,48 +6195,16 @@
           "priority": "Research Further",
           "status": "New",
           "notes": "Medicare",
-          "location_reasoning": "Olathe KS sits in the Mid-size market (~100K-350K) where rank-and-rent performs best. Current market signal is medium competition (top competitor DA ~22, map pack: 2-3 Listings), which indicates an underserved or weak-incumbent opening for bathroom accessibility remodel leads. City fit: balanced demand without major-metro SEO saturation.",
+          "location_reasoning": "Overland Park KS sits in the Mid-size market (~100K-350K) where rank-and-rent performs best. Current market signal is medium competition (top competitor DA ~22, map pack: 2-3 Listings), which indicates an underserved or weak-incumbent opening for bathroom accessibility remodel leads. City fit: balanced demand without major-metro SEO saturation.",
           "domain_suggestions": [
-            "bathroomaccessibilityremodelolatheks.com",
-            "olatheksbathroomaccessibilityremodel.com",
-            "bathroomaccessibilityremodel-olatheks.com"
+            "bathroomaccessibilityoverlandparkks.com",
+            "overlandparkbathroomremodel.com",
+            "seniorbathroomoverlandpark.com"
           ],
           "action_plan": [
-            "2/10",
-            "Search Google for 'Bathroom accessibility remodel Olathe KS' \u2014 verify competition",
-            "Check domain availability: bathroomaccessibilityremodelolatheks.com",
-            "If green light: build site + get ranking",
-            "**Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ",
-            "**Services** \u2014 Detailed service page with pricing context",
-            "**About** \u2014 Company story, credentials, service area",
-            "**Contact** \u2014 Form + phone + map + hours",
-            "**Areas We Serve** \u2014 List of suburbs/neighborhoods in Olathe KS",
-            "**Blog** \u2014 3-5 seed articles targeting long-tail keywords",
-            "**Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button",
-            "**Hero Section** \u2014 H1: \"Bathroom accessibility remodel in Olathe KS\" + subheadline with benefit + 2 CTAs (Free Estimate / Schedule Consultation)",
-            "**Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")",
-            "**Services Grid** \u2014 3-6 service cards with icons",
-            "**Why Choose Us** \u2014 3-4 differentiators with icons",
-            "**Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)",
-            "**FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)",
-            "**CTA Banner** \u2014 Secondary conversion push",
-            "**Footer** \u2014 Full nav + contact + service areas + social links",
-            "1 AA compliant",
-            "\"How much does Bathroom accessibility remodel cost in Olathe KS?\"",
-            "\"How long does Bathroom accessibility remodel take?\"",
-            "\"Do you offer free estimates?\"",
-            "\"Are you licensed and insured?\"",
-            "\"What areas do you serve?\"",
-            "\"Do you offer emergency Bathroom accessibility remodel?\"",
-            "\"What payment options do you accept?\"",
-            "Complete static website (HTML/CSS/JS)",
-            "Responsive design (mobile-first)",
-            "Contact form with validation",
-            "Google Analytics installed",
-            "Search Console submitted",
-            "LocalBusiness schema markup",
-            "5 blog article drafts (300-500 words each)",
-            "README with deployment instructions"
+            "1. Search Google for 'bathroom accessibility remodel Overland Park KS' \u2014 verify competition",
+            "2. Check domain availability: overlandparkbathroomremodel.com",
+            "3. If green light: build site + get ranking"
           ],
           "seo": {
             "search_volume": 11,
@@ -6282,7 +6218,7 @@
             "data_source": "estimated",
             "verification_needed": true
           },
-          "web_prompt": "# Lead Generation Website Build \u2014 Bathroom accessibility remodel in Olathe KS\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Bathroom accessibility remodel** targeting **Olathe KS**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$5,000**.\n\n## Target Market\n- **Location:** Olathe KS\n- **Service:** Bathroom accessibility remodel\n- **Average Job Value:** $20,000\n- **Urgency Level:** 4/10 (Standard \u2014 24-48hr response)\n- **Page Type:** installation_service\n\n## Primary Keywords to Target\n- Main: \"Bathroom accessibility remodel Olathe KS\"\n- Secondary: \"best Bathroom accessibility remodel near me\", \"Bathroom accessibility remodel company Olathe KS\", \"affordable Bathroom accessibility remodel Olathe KS\"\n- Long-tail: \"Bathroom accessibility remodel cost Olathe KS\", \"Bathroom accessibility remodel reviews Olathe KS\", \"how much does Bathroom accessibility remodel cost in Olathe KS\"\n\n## Domain\n**Primary:** bathroomaccessibilityremodelolatheks.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in Olathe KS\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Bathroom accessibility remodel in Olathe KS\" + subheadline with benefit + 2 CTAs (Free Estimate / Schedule Consultation)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** Portfolio gallery, manufacturer certifications, warranty info, financing available\n- **Urgency:** Same Day Appointments Available\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with Olathe KS address\n- **H1:** Exactly \"Bathroom accessibility remodel Olathe KS\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /bathroom-accessibility-remodel-olathe-ks/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for Olathe KS\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to bathroomaccessibilityremodelolatheks.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Bathroom accessibility remodel cost in Olathe KS?\"\n  2. \"How long does Bathroom accessibility remodel take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Bathroom accessibility remodel?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $5,000/month from client\n\n\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)",
+          "web_prompt": "# Lead Generation Website Build \u2014 Bathroom accessibility remodel in Overland Park KS\n\n## Overview\nBuild a high-converting, mobile-first lead generation website for **Bathroom accessibility remodel** targeting **Overland Park KS**. This is a Rank & Rent site designed to capture leads and forward them to a local service provider for a monthly fee of **$5,000**.\n\n## Target Market\n- **Location:** Overland Park KS\n- **Service:** Bathroom accessibility remodel\n- **Average Job Value:** $20,000\n- **Urgency Level:** 4/10 (Standard \u2014 24-48hr response)\n- **Page Type:** installation_service\n\n## Primary Keywords to Target\n- Main: \"Bathroom accessibility remodel Overland Park KS\"\n- Secondary: \"best Bathroom accessibility remodel near me\", \"Bathroom accessibility remodel company Overland Park KS\", \"affordable Bathroom accessibility remodel Overland Park KS\"\n- Long-tail: \"Bathroom accessibility remodel cost Overland Park KS\", \"Bathroom accessibility remodel reviews Overland Park KS\", \"how much does Bathroom accessibility remodel cost in Overland Park KS\"\n\n## Domain\n**Primary:** bathroomaccessibilityremodelOverland Parkks.com\n(Verify availability before building)\n\n## Page Structure\n### Required Pages\n1. **Homepage** \u2014 Hero + trust signals + service overview + CTA + FAQ\n2. **Services** \u2014 Detailed service page with pricing context\n3. **About** \u2014 Company story, credentials, service area\n4. **Contact** \u2014 Form + phone + map + hours\n5. **Areas We Serve** \u2014 List of suburbs/neighborhoods in Overland Park KS\n6. **Blog** \u2014 3-5 seed articles targeting long-tail keywords\n\n### Homepage Sections (Top to Bottom)\n1. **Sticky Header** \u2014 Logo + Phone number (click-to-call) + CTA button\n2. **Hero Section** \u2014 H1: \"Bathroom accessibility remodel in Overland Park KS\" + subheadline with benefit + 2 CTAs (Free Estimate / Schedule Consultation)\n3. **Trust Bar** \u2014 3 trust badges (e.g., \"Licensed & Insured\", \"Same Day Service\", \"Free Estimates\")\n4. **Services Grid** \u2014 3-6 service cards with icons\n5. **Why Choose Us** \u2014 3-4 differentiators with icons\n6. **Social Proof** \u2014 Testimonials (use realistic placeholder names/cities)\n7. **FAQ Accordion** \u2014 5-7 common questions (great for SEO + voice search)\n8. **CTA Banner** \u2014 Secondary conversion push\n9. **Footer** \u2014 Full nav + contact + service areas + social links\n\n## Design Requirements\n- **Style:** Clean, professional, high-trust. Avoid templates.\n- **Colors:** Blue + white + orange accents (proven conversion colors)\n- **Typography:** Sans-serif, large readable text, clear hierarchy\n- **Mobile:** 70%+ traffic will be mobile \u2014 optimize for thumbs, click-to-call prominent\n- **Speed:** Target <2s load time. Optimize images, minify CSS/JS\n- **Accessibility:** WCAG 2.1 AA compliant\n\n## Conversion Optimization\n- **Above the fold:** Phone number + form visible without scrolling\n- **Click-to-call:** Every phone number is a tap-to-call link\n- **Form:** Name + Phone + Service Needed + Address (4 fields max)\n- **Trust signals:** Portfolio gallery, manufacturer certifications, warranty info, financing available\n- **Urgency:** Same Day Appointments Available\n- **Social proof:** 3+ testimonials with photos, star ratings\n- **Risk reversal:** \"Free Quote\", \"No Obligation\", \"Satisfaction Guaranteed\"\n\n## SEO Requirements\n- **Meta:** Unique title + description for every page\n- **Schema:** LocalBusiness structured data with Overland Park KS address\n- **H1:** Exactly \"Bathroom accessibility remodel Overland Park KS\" on homepage\n- **Internal linking:** Every page links to contact page\n- **Image alt text:** Descriptive, keyword-rich\n- **URL structure:** /bathroom-accessibility-remodel-Overland Park-ks/\n- **Local content:** Mention specific neighborhoods, landmarks, weather/seasonal context for Overland Park KS\n- **FAQ Schema:** Mark up FAQ section for rich snippets\n\n## Technical Stack\n- **Static HTML/CSS/JS** (no CMS needed for lead gen)\n- **Form handling:** Use Formspree, Basin, or similar (forward to email)\n- **Analytics:** Google Analytics 4 + Google Search Console\n- **Hosting:** Netlify, Vercel, or Cloudflare Pages (free SSL + CDN)\n- **Domain:** Connect to bathroomaccessibilityremodelOverland Parkks.com via DNS\n\n## Lead Forwarding Setup\n- Form submissions \u2192 Email to [your email]\n- Phone number \u2192 Forward to [client's phone] via Google Voice or similar\n- Set up tracking: Use unique phone number per site to measure call volume\n\n## Content Guidelines\n- **Tone:** Professional but approachable\n- **Length:** 800-1200 words on homepage, 500+ on service pages\n- **FAQ Questions:**\n  1. \"How much does Bathroom accessibility remodel cost in Overland Park KS?\"\n  2. \"How long does Bathroom accessibility remodel take?\"\n  3. \"Do you offer free estimates?\"\n  4. \"Are you licensed and insured?\"\n  5. \"What areas do you serve?\"\n  6. \"Do you offer emergency Bathroom accessibility remodel?\"\n  7. \"What payment options do you accept?\"\n\n## Deliverables\n1. Complete static website (HTML/CSS/JS)\n2. Responsive design (mobile-first)\n3. Contact form with validation\n4. Google Analytics installed\n5. Search Console submitted\n6. LocalBusiness schema markup\n7. 5 blog article drafts (300-500 words each)\n8. README with deployment instructions\n\n## Success Metrics\n- **Target:** First lead within 30 days of going live\n- **Goal:** 5+ leads/month within 90 days\n- **Monthly Fee:** $5,000/month from client\n\n\n\n---\n**Budget Estimate:** $200-500 for initial build (one-time)\n**Monthly Maintenance:** $50-100 (content updates, monitoring)",
           "location_fit": 1.0,
           "kyle_breakdown": {
             "lead_value_score": 10,
