@@ -98,6 +98,23 @@ def calculate_seo_metrics(niche, city):
     # High search volume + low difficulty = great opportunity
     seo_opportunity = min(100, int((search_volume / 2) + (50 - keyword_difficulty)))
     
+    # Enhanced scoring: Kyle framework weights
+    # Lead Value (2.5x) + Low Competition (2.0x) + Traffic (1.0x) + Urgency (1.5x)
+    lead_value_score = min(10, avg_value / 2000)  # $20K = 10, $2K = 1
+    competition_score = max(0, 11 - (keyword_difficulty / 10))  # KD 10 = 10, KD 50 = 6
+    traffic_score = min(10, search_volume / 15)  # 150 searches = 10, 30 = 2
+    urgency_score = urgency / 10  # 10 = 1.0, 5 = 0.5
+    
+    composite_score = (
+        (lead_value_score * 2.5) +
+        (competition_score * 2.0) +
+        (traffic_score * 1.0) +
+        (urgency_score * 1.5)
+    )
+    
+    # Normalize to 0-100 scale
+    composite_score = min(100, max(0, int(composite_score * 2.5)))
+    
     return {
         "search_volume": search_volume,
         "keyword_difficulty": keyword_difficulty,
@@ -106,7 +123,7 @@ def calculate_seo_metrics(niche, city):
         "map_pack_status": map_pack_status,
         "competitor_da": competitor_da,
         "content_gap_score": content_gap,
-        "seo_opportunity_score": seo_opportunity,
+        "composite_score": composite_score,
         "data_source": "estimated",
         "verification_needed": True
     }
@@ -290,8 +307,15 @@ CITIES = [
     "Palmerston NT", "Katherine NT", "Alice Springs NT",
 ]
 
-def calculate_opportunity_score(niche, estimated_leads=50):
-    """Calculate opportunity score for a niche + city combo"""
+def calculate_opportunity_score(niche, estimated_leads=50, seo_metrics=None):
+    """Calculate opportunity score using enhanced Kyle framework.
+    
+    Kyle Scoring Weights:
+    - Lead Value: 2.5x
+    - Low Competition: 2.0x (inverted KD)
+    - Traffic: 1.0x
+    - Urgency: 1.5x
+    """
     avg_value = niche["avg_value"]
     urgency = niche["urgency"]
     recurring = 1.5 if niche["recurring"] else 1.0
@@ -315,19 +339,59 @@ def calculate_opportunity_score(niche, estimated_leads=50):
     # Cap monthly fee at realistic range ($300-$5000)
     monthly_fee = max(300, min(monthly_fee, 5000))
     
-    # Score components
-    fee_score = min(monthly_fee / 1000, 10)  # Cap at 10
-    urgency_score = urgency
-    recurring_score = 2 if niche["recurring"] else 0
+    # Enhanced Kyle Framework Scoring (0-100 scale)
+    # Lead Value Score: $20K = 10, $2K = 1
+    lead_value_score = min(10, avg_value / 2000)
     
-    # Weighted score
-    score = (fee_score * 0.4) + (urgency_score * 0.3) + (recurring_score * 0.2) + 2
+    # Competition Score: Get KD from SEO metrics if available
+    kd = 25  # Default moderate difficulty
+    if seo_metrics:
+        kd = seo_metrics.get("keyword_difficulty", 25)
+    competition_score = max(0, 11 - (kd / 10))  # KD 10 = 10, KD 50 = 6
+    
+    # Traffic Score: 150 searches = 10, 30 = 2
+    search_volume = 50  # Default
+    if seo_metrics:
+        search_volume = seo_metrics.get("search_volume", 50)
+    traffic_score = min(10, search_volume / 15)
+    
+    # Urgency Score: 10 = 1.0, 5 = 0.5
+    urgency_score = urgency / 10
+    
+    # Composite Score with Kyle weights
+    composite_score = (
+        (lead_value_score * 2.5) +
+        (competition_score * 2.0) +
+        (traffic_score * 1.0) +
+        (urgency_score * 1.5)
+    )
+    
+    # Normalize to 0-100 scale and round
+    opportunity_score = min(100, max(0, round(composite_score * 2.5, 1)))
+    
+    # Priority classification based on score
+    if opportunity_score >= 70:
+        priority = "Start Now"
+    elif opportunity_score >= 50:
+        priority = "Research Further"
+    elif opportunity_score >= 30:
+        priority = "Monitor"
+    else:
+        priority = "Low Priority"
     
     return {
         "monthly_fee": round(monthly_fee, 0),
         "lead_value": round(lead_value, 0),
-        "opportunity_score": round(score, 1),
+        "opportunity_score": opportunity_score,
         "estimated_leads": estimated_leads,
+        "priority": priority,
+        "kyle_breakdown": {
+            "lead_value_score": round(lead_value_score, 1),
+            "competition_score": round(competition_score, 1),
+            "traffic_score": round(traffic_score, 1),
+            "urgency_score": round(urgency_score, 1),
+            "composite_raw": round(composite_score, 1)
+        }
     }
 
 def generate_web_prompt(niche_name, city_name, avg_value, urgency, recurring, domain, monthly_fee, seo_metrics):
@@ -564,23 +628,13 @@ def find_opportunities(category=None, count=5, include_australian=False):
         niche = niches[i]
         city = cities[i % len(cities)]
         
-        calc = calculate_opportunity_score(niche)
-        domains = generate_domain_suggestion(niche["name"], city)
-        
-        # Determine priority
-        if calc["opportunity_score"] >= 8 and calc["monthly_fee"] >= 1000:
-            priority = "Start Now"
-        elif calc["opportunity_score"] >= 6:
-            priority = "Research Further"
-        else:
-            priority = "Monitor"
-        
-        # Default status
-        status = "New"
-        
         # Add SEO metrics (estimated based on niche characteristics)
         # In production, these would come from Ahrefs/Mangools API
         seo_metrics = calculate_seo_metrics(niche, city)
+        
+        # Calculate opportunity score with SEO metrics (enhanced Kyle framework)
+        calc = calculate_opportunity_score(niche, seo_metrics=seo_metrics)
+        domains = generate_domain_suggestion(niche["name"], city)
         
         # Generate web development prompt
         web_prompt = generate_web_prompt(
@@ -609,8 +663,8 @@ def find_opportunities(category=None, count=5, include_australian=False):
             "recurring": niche["recurring"],
             "domain_suggestions": domains,
             "location_reasoning": location_reasoning,
-            "priority": priority,
-            "status": status,
+            "priority": calc.get("priority", "Monitor"),
+            "status": "New",
             "notes": niche["notes"],
             "action_plan": [
                 f"1. Search Google for '{niche['name']} {city}' — verify competition",
