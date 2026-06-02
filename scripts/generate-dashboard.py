@@ -277,7 +277,7 @@ def generate_dashboard_html(opportunities):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rank & Rent — Opportunity Dashboard</title>
+    <title>Rent & Rank — Opportunity Dashboard</title>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         
