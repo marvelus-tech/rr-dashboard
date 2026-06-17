@@ -525,7 +525,6 @@
             color: var(--gold);
         }
 
-        /* Status Row */
         .status-row { 
             display: flex; 
             align-items: center; 
@@ -533,35 +532,39 @@
             margin-bottom: 12px; 
         }
         
-        .status-badge { 
-            font-size: 11px; 
-            font-weight: 700; 
-            padding: 4px 12px; 
-            border-radius: 100px; 
-            text-transform: uppercase; 
-            letter-spacing: 0.06em; 
-            transition: all 0.3s ease; 
-        }
-        
         .status-select { 
-            background: var(--surface-warm); 
+            appearance: none;
+            -webkit-appearance: none;
+            background: var(--surface-warm) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a8a8a' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
             border: 1px solid var(--border); 
-            border-radius: 8px; 
+            border-radius: 100px; 
             color: var(--text-primary); 
-            padding: 6px 10px; 
-            font-size: 13px; 
+            padding: 6px 32px 6px 14px; 
+            font-size: 12px; 
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
             font-family: var(--font-body); 
             cursor: pointer; 
-            outline: none; 
+            outline: none;
+            min-width: 120px;
+            transition: all 0.2s ease;
         }
         
         .status-select:hover { 
             border-color: var(--border-hover); 
         }
         
+        .status-select:focus {
+            border-color: var(--border-gold);
+            box-shadow: 0 0 0 3px var(--gold-soft);
+        }
+        
         .status-select option { 
             background: var(--surface); 
-            color: var(--text-primary); 
+            color: var(--text-primary);
+            font-weight: 500;
+            text-transform: none;
         }
 
         /* Priority */
@@ -1090,7 +1093,6 @@
                 </div>
                 
                 <div class="status-row">
-                    <span class="status-badge" id="badge-flood" style="background: rgba(134,134,139,0.12); color: #86868b; border: 1px solid rgba(134,134,139,0.3);">New</span>
                     <select class="status-select" data-id="flood" onchange="updateStatus(this)">
                         <option value="New" selected>New</option>
                         <option value="Researching">Researching</option>
@@ -1222,7 +1224,6 @@
                 </div>
                 
                 <div class="status-row">
-                    <span class="status-badge" id="badge-pest" style="background: rgba(134,134,139,0.12); color: #86868b; border: 1px solid rgba(134,134,139,0.3);">New</span>
                     <select class="status-select" data-id="pest" onchange="updateStatus(this)">
                         <option value="New" selected>New</option>
                         <option value="Researching">Researching</option>
@@ -1354,7 +1355,6 @@
                 </div>
                 
                 <div class="status-row">
-                    <span class="status-badge" id="badge-asbestos" style="background: rgba(134,134,139,0.12); color: #86868b; border: 1px solid rgba(134,134,139,0.3);">New</span>
                     <select class="status-select" data-id="asbestos" onchange="updateStatus(this)">
                         <option value="New" selected>New</option>
                         <option value="Researching">Researching</option>
@@ -1493,7 +1493,7 @@
             statuses[id] = newStatus;
             saveStatuses(statuses);
             
-            const badge = document.getElementById('badge-' + id);
+            // Color-code the select based on status
             const colors = {
                 'New': '#86868b',
                 'Researching': '#5b8bba',
@@ -1504,10 +1504,8 @@
                 'Declined': '#b54242'
             };
             const color = colors[newStatus] || '#86868b';
-            badge.textContent = newStatus;
-            badge.style.background = color + '15';
-            badge.style.color = color;
-            badge.style.borderColor = color + '40';
+            select.style.borderColor = color + '40';
+            select.style.backgroundColor = color + '08';
             
             const card = select.closest('.opportunity-card');
             card.dataset.status = newStatus.toLowerCase();
