@@ -183,47 +183,113 @@
             font-weight: 600;
         }
 
-        /* ===== SORT BAR ===== */
-        .sort-bar { 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            margin-bottom: 32px; 
-            padding: 16px 20px; 
-            background: var(--surface-warm); 
-            border: 1px solid var(--border); 
-            border-radius: var(--radius-sm); 
+        /* ===== SORT DROPDOWN ===== */
+        .sort-dropdown {
+            position: relative;
+            display: inline-block;
         }
         
-        .sort-label { 
-            font-size: 13px; 
-            color: var(--text-secondary); 
-            font-weight: 500; 
-            margin-right: 4px; 
+        .sort-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            font-family: var(--font-body);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            min-width: 180px;
+            justify-content: space-between;
         }
         
-        .sort-btn { 
-            padding: 6px 14px; 
-            border-radius: 8px; 
-            border: 1px solid var(--border); 
-            background: transparent; 
-            color: var(--text-secondary); 
-            font-size: 12px; 
-            font-weight: 500; 
-            cursor: pointer; 
-            transition: all 0.25s ease; 
-            font-family: var(--font-body); 
+        .sort-trigger:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
         }
         
-        .sort-btn:hover { 
-            border-color: var(--border-hover); 
-            color: var(--text-primary); 
+        .sort-trigger.active {
+            border-color: var(--border-gold);
+            background: var(--gold-soft);
+            color: var(--gold-dark);
         }
         
-        .sort-btn.active { 
-            background: var(--green-soft); 
-            color: var(--green); 
-            border-color: rgba(45, 125, 70, 0.3); 
+        .sort-trigger svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+        
+        .sort-dropdown.open .sort-trigger svg {
+            transform: rotate(180deg);
+        }
+        
+        .sort-menu {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            padding: 6px;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px) scale(0.96);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 100;
+        }
+        
+        .sort-dropdown.open .sort-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+        
+        .sort-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: var(--font-body);
+            border: none;
+            background: transparent;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .sort-option:hover {
+            background: var(--bg-warm);
+            color: var(--text-primary);
+        }
+        
+        .sort-option.active {
+            background: var(--green-soft);
+            color: var(--green);
+        }
+        
+        .sort-option .check {
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            flex-shrink: 0;
+        }
+        
+        .sort-option.active .check {
+            opacity: 1;
         }
 
         /* ===== STATS BAR ===== */
@@ -958,10 +1024,24 @@
             <button class="filter-btn" data-filter="declined">Declined (0)</button>
         </div>
         
-        <div class="sort-bar">
-            <span class="sort-label">Sort by:</span>
-            <button class="sort-btn active" data-sort="recent">Recently Added</button>
-            <button class="sort-btn" data-sort="score">Highest Score</button>
+        <div class="sort-bar" style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px; padding: 16px 20px; background: var(--surface-warm); border: 1px solid var(--border); border-radius: var(--radius-sm);">
+            <span style="font-size: 13px; color: var(--text-secondary); font-weight: 500;">Sort by</span>
+            <div class="sort-dropdown" id="sortDropdown">
+                <button class="sort-trigger" onclick="toggleSortDropdown()">
+                    <span id="sortLabel">Recently Added</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="sort-menu">
+                    <button class="sort-option active" data-sort="recent" onclick="selectSort(this)">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        Recently Added
+                    </button>
+                    <button class="sort-option" data-sort="score" onclick="selectSort(this)">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        Highest Score
+                    </button>
+                </div>
+            </div>
         </div>
         
         <div class="stats-bar">
@@ -1496,6 +1576,32 @@
             });
         }
         
+        function toggleSortDropdown() {
+            document.getElementById('sortDropdown').classList.toggle('open');
+        }
+        
+        function selectSort(btn) {
+            const sortType = btn.dataset.sort;
+            const label = btn.textContent.trim();
+            
+            // Update UI
+            document.querySelectorAll('.sort-option').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('sortLabel').textContent = label;
+            document.getElementById('sortDropdown').classList.remove('open');
+            
+            // Apply sort
+            sortCards(sortType);
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            const dropdown = document.getElementById('sortDropdown');
+            if (dropdown && !dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+        
         function sortCards(sortType) {
             const grid = document.querySelector('.grid');
             const cards = Array.from(document.querySelectorAll('.opportunity-card'));
@@ -1544,14 +1650,6 @@
                         card.classList.add('hidden');
                     }
                 });
-            });
-        });
-        
-        document.querySelectorAll('.sort-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                sortCards(btn.dataset.sort);
             });
         });
         
