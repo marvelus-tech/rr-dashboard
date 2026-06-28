@@ -364,7 +364,174 @@
         }
         
         @media (max-width: 640px) { 
-            .grid { grid-template-columns: 1fr; } 
+            .grid { grid-template-columns: 1fr; gap: 16px; } 
+        }
+
+        /* Activity Tracker */
+        .activity-tracker {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding: 12px;
+            background: var(--surface-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        
+        .activity-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-body);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex: 1;
+            justify-content: center;
+        }
+        
+        .activity-btn:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+            background: var(--bg-warm);
+            transform: translateY(-1px);
+        }
+        
+        .activity-btn svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+        
+        .activity-btn.call:hover {
+            border-color: var(--green);
+            color: var(--green);
+            background: var(--green-soft);
+        }
+        
+        .activity-btn.email:hover {
+            border-color: var(--gold-dark);
+            color: var(--gold-dark);
+            background: var(--gold-soft);
+        }
+        
+        .activity-btn.notes:hover {
+            border-color: var(--text-tertiary);
+            color: var(--text-primary);
+            background: rgba(139, 119, 89, 0.06);
+        }
+
+        /* State/Region Headers */
+        .region-header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 8px 0 4px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-warm) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        
+        .region-header:first-child {
+            margin-top: 0;
+        }
+        
+        .region-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: var(--gold-soft);
+            border: 1px solid var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-dark);
+            flex-shrink: 0;
+        }
+        
+        .region-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .region-title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        .region-count {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            margin-left: auto;
+            padding: 4px 12px;
+            background: var(--bg-warm);
+            border-radius: 100px;
+            border: 1px solid var(--border);
+        }
+        
+        .region-divider {
+            grid-column: 1 / -1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%);
+            margin: 8px 0;
+        }
+
+        /* Empty State */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+        }
+        
+        .empty-state-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+        
+        .empty-state-title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .empty-state-message {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .empty-state-hint {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 16px;
+            padding: 8px 16px;
+            background: var(--bg-warm);
+            border-radius: 100px;
+            display: inline-block;
         }
 
         /* Opportunity Card */
@@ -390,8 +557,12 @@
             border-color: var(--border-gold); 
         }
         
-        .opportunity-card.hidden { 
-            display: none; 
+        @media (max-width: 768px) { 
+            .opportunity-card { padding: 20px; }
+        }
+        
+        @media (max-width: 640px) { 
+            .opportunity-card { padding: 16px; }
         }
         
         @keyframes cardIn { 
@@ -492,10 +663,11 @@
         .niche-title { 
             font-family: var(--font-display);
             font-size: 22px; 
-            font-weight: 600; 
+            font-weight: 700; 
             margin-bottom: 6px; 
             line-height: 1.3;
             color: var(--text-primary);
+            letter-spacing: -0.01em;
         }
         
         .city-subtitle { 
@@ -505,6 +677,7 @@
             display: flex; 
             align-items: center; 
             gap: 6px; 
+            font-weight: 500;
         }
         
         .icon-pin { 
@@ -1064,23 +1237,23 @@
         </div>
         
         <div class="stats-bar" id="statsBar">
-            <div class="stat-card">
+            <div class="stat-card" title="Total number of opportunities in the database">
                 <div class="stat-number" id="statTotal">0</div>
                 <div class="stat-label">Opportunities</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" title="Average monthly rental fee across all opportunities">
                 <div class="stat-number" id="statFee">$0</div>
                 <div class="stat-label">Avg Monthly Fee</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" title="Average opportunity score (0-10). Higher = better opportunity.">
                 <div class="stat-number" id="statScore">0</div>
                 <div class="stat-label">Avg Score</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" title="Average SEO composite score (0-100). Higher = easier to rank.">
                 <div class="stat-number" id="statSEO">0</div>
                 <div class="stat-label">Avg SEO Score</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" title="Number of opportunities marked as 'Start Now' priority">
                 <div class="stat-number" id="statStart">0</div>
                 <div class="stat-label">Start Now</div>
             </div>
@@ -1174,6 +1347,26 @@
                     ${op.city}
                 </div>
                 
+                <div class="keyword-row" style="margin: 8px 0; padding: 6px 10px; background: rgba(0,0,0,0.3); border-radius: 6px; border-left: 3px solid #3b82f6;">
+                    <div style="font-size: 10px; text-transform: uppercase; color: #888; margin-bottom: 2px;">Target Keyword</div>
+                    <div style="font-size: 13px; font-weight: 600; color: #e0e0e0; font-family: 'SF Mono', monospace;">"${op.main_keyword || op.niche + ' ' + op.city}"</div>
+                </div>
+                
+                <div class="activity-tracker">
+                    <button class="activity-btn call" onclick="alert('Call tracking: ' + '${op.city} ${op.niche}')" title="Log a call activity">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.94 12.94 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.94 12.94 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        Call
+                    </button>
+                    <button class="activity-btn email" onclick="alert('Email tracking: ' + '${op.city} ${op.niche}')" title="Log an email activity">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Email
+                    </button>
+                    <button class="activity-btn notes" onclick="alert('Notes for: ' + '${op.city} ${op.niche}')" title="Add notes">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                        Notes
+                    </button>
+                </div>
+                
                 <div class="location-confidence" title="Location fit: ${(op.location_fit || 1.0).toFixed(2)}">
                     <span class="confidence-label ${confidence.class}">${confidence.label}</span>
                     <div class="confidence-bar">
@@ -1210,21 +1403,62 @@
                 </div>
                 
                 <div class="metrics">
-                    <div class="metric">
+                    <div class="metric" title="Estimated monthly rental fee you can charge">
                         <div class="metric-label">Monthly Fee</div>
                         <div class="metric-value gold">$${(op.monthly_fee || 0).toLocaleString()}</div>
                     </div>
-                    <div class="metric">
+                    <div class="metric" title="Average value of one job/sale">
                         <div class="metric-label">Avg Job Value</div>
                         <div class="metric-value">$${(op.avg_job_value || 0).toLocaleString()}</div>
                     </div>
-                    <div class="metric">
+                    <div class="metric" title="Value of a single lead to the business">
                         <div class="metric-label">Lead Value</div>
                         <div class="metric-value">$${(op.lead_value || 0).toLocaleString()}</div>
                     </div>
-                    <div class="metric">
+                    <div class="metric" title="Is this a recurring service (monthly) or one-time?">
                         <div class="metric-label">Recurring</div>
                         <div class="metric-value recurring-indicator">${recurring}</div>
+                    </div>
+                </div>
+                
+                <div class="score-breakdown" style="margin: 12px 0; padding: 10px; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="font-size: 10px; text-transform: uppercase; color: #888; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span>Score Breakdown</span>
+                        <span style="color: #666;">Total: ${(op.adjusted_score || op.opportunity_score || 0).toFixed(1)}/10</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                        <div class="score-item" title="Base opportunity score before adjustments">
+                            <span style="color: #888; font-size: 11px;">Base Score</span>
+                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(op.opportunity_score || 0).toFixed(1)}</span>
+                        </div>
+                        <div class="score-item" title="Location match quality (1.0 = perfect)">
+                            <span style="color: #888; font-size: 11px;">Location Fit</span>
+                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(op.location_fit || 1.0).toFixed(2)}</span>
+                        </div>
+                        <div class="score-item" title="How quickly customers need this service (10 = emergency)">
+                            <span style="color: #888; font-size: 11px;">Urgency</span>
+                            <span style="color: ${urgencyColor}; font-size: 12px; font-weight: 600;">${urgency}/10</span>
+                        </div>
+                        <div class="score-item" title="Monthly searches for main keyword">
+                            <span style="color: #888; font-size: 11px;">Search Volume</span>
+                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(seo.search_volume || 0).toLocaleString()}/mo</span>
+                        </div>
+                        <div class="score-item" title="How hard to rank (0-100, lower is easier)">
+                            <span style="color: #888; font-size: 11px;">Keyword Difficulty</span>
+                            <span style="color: ${seoColor}; font-size: 12px; font-weight: 600;">${seo.keyword_difficulty || 'N/A'}</span>
+                        </div>
+                        <div class="score-item" title="Competitor Domain Authority (lower = easier to beat)">
+                            <span style="color: #888; font-size: 11px;">Competitor DA</span>
+                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.competitor_da || 'N/A'}</span>
+                        </div>
+                        <div class="score-item" title="Content gap opportunity (higher = more room to win)">
+                            <span style="color: #888; font-size: 11px;">Content Gap</span>
+                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.content_gap_score || 'N/A'}</span>
+                        </div>
+                        <div class="score-item" title="Google Maps competition level">
+                            <span style="color: #888; font-size: 11px;">Competition</span>
+                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.competition_level || 'N/A'}</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -1240,30 +1474,30 @@
                 <div class="seo-section">
                     <div class="seo-header">
                         <span class="seo-title">SEO Metrics</span>
-                        <span class="seo-badge" style="background: ${seoColor}15; color: ${seoColor}; border: 1px solid ${seoColor}40;">Score: ${seoScore}</span>
+                        <span class="seo-badge" style="background: ${seoColor}15; color: ${seoColor}; border: 1px solid ${seoColor}40;" title="Composite score based on keyword difficulty, search volume, competitor strength, content gap, and competition level. Higher = easier to rank.">Score: ${seoScore}</span>
                     </div>
                     <div class="seo-grid">
-                        <div class="seo-metric">
+                        <div class="seo-metric" title="How hard it is to rank for the main keyword (0-100). Lower is easier.">
                             <div class="seo-metric-value">${seo.keyword_difficulty || 'N/A'}</div>
                             <div class="seo-metric-label">Keyword Difficulty</div>
                         </div>
-                        <div class="seo-metric">
+                        <div class="seo-metric" title="Estimated monthly searches for the main keyword. Higher = more potential leads.">
                             <div class="seo-metric-value">${seo.search_volume || 'N/A'}</div>
                             <div class="seo-metric-label">Search Volume</div>
                         </div>
-                        <div class="seo-metric">
+                        <div class="seo-metric" title="Domain Authority of top competitors. Lower = easier to outrank.">
                             <div class="seo-metric-value">${seo.competitor_da || 'N/A'}</div>
                             <div class="seo-metric-label">Competitor DA</div>
                         </div>
-                        <div class="seo-metric">
+                        <div class="seo-metric" title="How much content is missing from competitors. Higher = more opportunity to create valuable content.">
                             <div class="seo-metric-value">${seo.content_gap_score || 'N/A'}</div>
                             <div class="seo-metric-label">Content Gap</div>
                         </div>
                     </div>
                     <div class="seo-details">
-                        <div class="seo-detail"><span class="seo-detail-label">Competition:</span> ${seo.competition_level || 'N/A'}</div>
-                        <div class="seo-detail"><span class="seo-detail-label">Backlinks:</span> ${seo.backlink_estimate || 'N/A'}</div>
-                        <div class="seo-detail"><span class="seo-detail-label">Map Pack:</span> ${seo.map_pack_status || 'N/A'}</div>
+                        <div class="seo-detail" title="How saturated the Google Maps results are"><span class="seo-detail-label">Competition:</span> ${seo.competition_level || 'N/A'}</div>
+                        <div class="seo-detail" title="Estimated backlinks needed to rank"><span class="seo-detail-label">Backlinks:</span> ${seo.backlink_estimate || 'N/A'}</div>
+                        <div class="seo-detail" title="Number of businesses in Google Maps pack"><span class="seo-detail-label">Map Pack:</span> ${seo.map_pack_status || 'N/A'}</div>
                     </div>
                     <div class="seo-verification">⚠️ Estimated metrics — verify with Ahrefs/Mangools</div>
                 </div>
@@ -1290,7 +1524,16 @@
             const grid = document.getElementById('grid');
             
             if (!ops.length) {
-                grid.innerHTML = '<div style="text-align: center; padding: 60px; color: var(--text-tertiary);">No opportunities found.</div>';
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                        <div class="empty-state-title">No opportunities found</div>
+                        <div class="empty-state-message">Try adjusting your filters or check back after the next batch run.</div>
+                        <div class="empty-state-hint">Next batch: Sundays at 9:00 AM AEST</div>
+                    </div>
+                `;
                 return;
             }
             
@@ -1326,11 +1569,60 @@
                 }
             });
             
-            // Render cards
-            grid.innerHTML = ops.map((op, i) => buildCard(op, i)).join('');
+            // Render cards grouped by state
+            const grouped = {};
+            ops.forEach(op => {
+                const state = extractState(op.city) || 'Other';
+                if (!grouped[state]) grouped[state] = [];
+                grouped[state].push(op);
+            });
+            
+            const sortedStates = Object.keys(grouped).sort((a, b) => grouped[b].length - grouped[a].length);
+            
+            let html = '';
+            let rank = 0;
+            
+            sortedStates.forEach((state, stateIndex) => {
+                const stateOps = grouped[state];
+                html += `
+                    <div class="region-header" data-region="${state}">
+                        <div class="region-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="region-title">${state}</div>
+                        <div class="region-count">${stateOps.length} opportunity${stateOps.length !== 1 ? 'ies' : 'y'}</div>
+                    </div>
+                `;
+                
+                stateOps.forEach(op => {
+                    html += buildCard(op, rank);
+                    rank++;
+                });
+                
+                if (stateIndex < sortedStates.length - 1) {
+                    html += `<div class="region-divider"></div>`;
+                }
+            });
+            
+            grid.innerHTML = html;
             
             // Apply saved statuses
             applySavedStatuses();
+        }
+        
+        function extractState(city) {
+            if (!city) return 'Other';
+            const parts = city.trim().split(' ');
+            if (parts.length >= 2) {
+                const last = parts[parts.length - 1];
+                if (last.length === 2 && last === last.toUpperCase()) {
+                    return last;
+                }
+            }
+            return 'Other';
         }
         
         function updateStatus(select) {
@@ -1464,13 +1756,60 @@
                 btn.classList.add('active');
                 
                 const filter = btn.dataset.filter;
+                let visibleCount = 0;
+                
                 document.querySelectorAll('.opportunity-card').forEach(card => {
                     if (filter === 'all' || card.dataset.status === filter) {
                         card.classList.remove('hidden');
+                        visibleCount++;
                     } else {
                         card.classList.add('hidden');
                     }
                 });
+                
+                // Update region headers visibility
+                document.querySelectorAll('.region-header').forEach(header => {
+                    let nextEl = header.nextElementSibling;
+                    let hasVisible = false;
+                    while (nextEl && !nextEl.classList.contains('region-header')) {
+                        if (nextEl.classList.contains('opportunity-card') && !nextEl.classList.contains('hidden')) {
+                            hasVisible = true;
+                            break;
+                        }
+                        nextEl = nextEl.nextElementSibling;
+                    }
+                    header.style.display = hasVisible ? '' : 'none';
+                });
+                
+                // Update dividers
+                document.querySelectorAll('.region-divider').forEach(divider => {
+                    let prevEl = divider.previousElementSibling;
+                    let nextEl = divider.nextElementSibling;
+                    while (prevEl && prevEl.classList.contains('opportunity-card') && prevEl.classList.contains('hidden')) {
+                        prevEl = prevEl.previousElementSibling;
+                    }
+                    while (nextEl && nextEl.classList.contains('opportunity-card') && nextEl.classList.contains('hidden')) {
+                        nextEl = nextEl.nextElementSibling;
+                    }
+                    const prevVisible = prevEl && (prevEl.classList.contains('region-header') || (!prevEl.classList.contains('hidden') && !prevEl.classList.contains('region-divider')));
+                    const nextVisible = nextEl && (nextEl.classList.contains('region-header') || (!nextEl.classList.contains('hidden') && !nextEl.classList.contains('region-divider')));
+                    divider.style.display = (prevVisible && nextVisible) ? '' : 'none';
+                });
+                
+                // Show empty state if needed
+                const grid = document.getElementById('grid');
+                if (visibleCount === 0) {
+                    grid.innerHTML = `
+                        <div class="empty-state">
+                            <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                            <div class="empty-state-title">No opportunities found</div>
+                            <div class="empty-state-message">No ${filter !== 'all' ? filter + ' ' : ''}opportunities match your current filter. Try a different filter or check back later.</div>
+                            <div class="empty-state-hint">Click "All" to see every opportunity</div>
+                        </div>
+                    `;
+                }
             });
         });
         
