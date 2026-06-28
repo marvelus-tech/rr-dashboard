@@ -22,10 +22,10 @@ def run_cmd(cmd, description):
     return True
 
 def main():
-    print("=" * 60)
+    print("━" * 60)
     print("🚀 Rank & Rent Weekly Pipeline")
     print(f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-    print("=" * 60)
+    print("━" * 60)
     
     # Ensure data directory exists
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -61,12 +61,12 @@ def main():
     ):
         return 1
     
-    print("\n" + "=" * 60)
+    print("\n" + "━" * 60)
     print("✅ Weekly pipeline complete!")
     print(f"📊 Dashboard: {SKILL_DIR}/dashboard.html")
     print(f"📁 Markdown: {md_path}")
     print(f"📁 JSON: {json_path}")
-    print("=" * 60)
+    print("━" * 60)
     
     return 0
 

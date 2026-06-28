@@ -108,9 +108,9 @@ def main():
     # Sort by adjusted score
     all_ops.sort(key=lambda x: x.get('adjusted_score', 0), reverse=True)
     
-    print('=== TOP 15 REAL OPPORTUNITIES (Location-Industry Fit Applied) ===')
+    print('▶ TOP 15 REAL OPPORTUNITIES (Location-Industry Fit Applied)')
     print(f"{'#':<4} {'Niche':<35} {'City':<20} {'Base':<6} {'Adj':<6} {'Fit':<5} {'Fee':<7} {'KD':<4} {'Vol':<5} {'Urg':<4} {'Note'}")
-    print('-' * 120)
+    print('─' * 120)
     
     for i, op in enumerate(all_ops[:15], 1):
         base = op.get('opportunity_score', 0)
@@ -127,7 +127,7 @@ def main():
         print(f"{i:<4} {op['niche'][:34]:<35} | {op['city'][:19]:<20} | {base:<6} | {adj:<6} | {fit:<5} | ${fee:<6.0f} | {kd:<4} | {vol:<5} | {urg:<4} | {note}")
     
     print()
-    print('=== FALSE POSITIVES EXPOSED (Base >80, Adjusted <50) ===')
+    print('▶ FALSE POSITIVES EXPOSED (Base >80, Adjusted <50)')
     for op in all_ops:
         base = op.get('opportunity_score', 0)
         if base <= 10:
@@ -137,7 +137,7 @@ def main():
             print(f"  - {op['niche']} in {op['city']}: {base} -> {adj} (fit: {op.get('location_fit', 1.0)}) - {op.get('penalty_reason', '')}")
     
     print()
-    print('=== SCORE DISTRIBUTION ===')
+    print('▶ SCORE DISTRIBUTION')
     print(f"  Start Now (70+):       {sum(1 for x in all_ops if x.get('adjusted_score', 0) >= 70)}")
     print(f"  Research Further (50+): {sum(1 for x in all_ops if 50 <= x.get('adjusted_score', 0) < 70)}")
     print(f"  Monitor (30+):         {sum(1 for x in all_ops if 30 <= x.get('adjusted_score', 0) < 50)}")
