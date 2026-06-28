@@ -427,96 +427,6 @@
             background: rgba(139, 119, 89, 0.06);
         }
 
-        /* DNC Indicator */
-        .dnc-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        
-        .dnc-indicator.dnc-safe {
-            background: var(--green-soft);
-            color: var(--green);
-            border: 1px solid rgba(45, 125, 70, 0.2);
-        }
-        
-        .dnc-indicator.dnc-flag {
-            background: var(--danger-soft);
-            color: var(--danger);
-            border: 1px solid rgba(181, 66, 66, 0.2);
-        }
-        
-        .dnc-indicator.dnc-pending {
-            background: var(--warning-soft);
-            color: var(--warning);
-            border: 1px solid rgba(201, 162, 39, 0.2);
-        }
-        
-        .dnc-indicator svg {
-            width: 12px;
-            height: 12px;
-        }
-        
-        .dnc-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 12px;
-            background: var(--surface-warm);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            margin-bottom: 12px;
-            font-size: 12px;
-        }
-        
-        .dnc-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-        
-        .portal-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            color: var(--gold);
-            font-size: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            padding: 4px 8px;
-            border-radius: 6px;
-            background: var(--gold-soft);
-            border: 1px solid var(--border-gold);
-            transition: all 0.2s ease;
-        }
-        
-        .portal-link:hover {
-            background: var(--gold-glow);
-            color: var(--gold-dark);
-        }
-        
-        .portal-link svg {
-            width: 12px;
-            height: 12px;
-        }
-        
-        .portal-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 12px;
-            background: var(--surface-warm);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            margin-bottom: 12px;
-            font-size: 12px;
-        }
-
         /* State/Region Headers */
         .region-header {
             grid-column: 1 / -1;
@@ -1457,39 +1367,6 @@
                     </button>
                 </div>
                 
-                <div class="dnc-row">
-                    <span class="dnc-label">DNC</span>
-                    <span class="dnc-indicator ${op.dnc_status === 'flag_dnc' ? 'dnc-flag' : op.dnc_status === 'safe' ? 'dnc-safe' : 'dnc-pending'}">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
-                            <line x1="12" y1="9" x2="12" y2="13"/>
-                            <line x1="12" y1="17" x2="12.01" y2="17"/>
-                        </svg>
-                        ${op.dnc_status === 'flag_dnc' ? 'DNC Flag' : op.dnc_status === 'safe' ? 'Safe' : 'Pending'}
-                    </span>
-                </div>
-                
-                <div class="portal-row">
-                    <span class="dnc-label">Property Records</span>
-                    ${op.portal_url ? 
-                        `<a class="portal-link" href="${op.portal_url}" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
-                                <polyline points="15 3 21 3 21 9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
-                            </svg>
-                            Open Portal
-                        </a>` :
-                        `<a class="portal-link" href="https://www.google.com/search?q=${encodeURIComponent((op.city || '').split(' ')[0] + ' county ' + (op.city || '').split(' ').pop() + ' assessor property records')}" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"/>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                            </svg>
-                            Find Portal
-                        </a>`
-                    }
-                </div>
-                
                 <div class="location-confidence" title="Location fit: ${(op.location_fit || 1.0).toFixed(2)}">
                     <span class="confidence-label ${confidence.class}">${confidence.label}</span>
                     <div class="confidence-bar">
@@ -1642,29 +1519,7 @@
             </div>`;
         }
         
-        function enrichOpportunities() {
-        const ops = OPPORTUNITIES_DATA.opportunities || [];
-        const dncList = new Set();
-        try {
-            const stored = localStorage.getItem('dnc_list');
-            if (stored) stored.split(',').forEach(n => dncList.add(n.trim()));
-        } catch(e) {}
-        
-        ops.forEach(op => {
-            if (!op.dnc_status) op.dnc_status = 'pending';
-            if (!op.portal_url) {
-                op.portal_url = null;
-                op.portal_status = 'Search required';
-            }
-            if (op.dnc_status === 'pending') {
-                const phone = (op.phone || '').replace(/\D/g,'');
-                if (phone && dncList.has(phone)) op.dnc_status = 'flag_dnc';
-            }
-        });
-    }
-    
     function renderDashboard() {
-        enrichOpportunities();
         const ops = OPPORTUNITIES_DATA.opportunities || [];
             const grid = document.getElementById('grid');
             
