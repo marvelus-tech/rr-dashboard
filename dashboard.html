@@ -17,9 +17,9 @@
             --border-hover: rgba(139, 119, 89, 0.25);
             --border-gold: rgba(212, 175, 55, 0.3);
             --text-primary: #1a1a1a;
-            --text-secondary: #5c5c5c;
-            --text-tertiary: #8a8a8a;
-            --text-muted: #a0a0a0;
+            --text-secondary: #4a4a4a;
+            --text-tertiary: #5c5c5c;
+            --text-muted: #6e6e6e;
             --gold: #c9a227;
             --gold-light: #d4b84a;
             --gold-dark: #a88420;
@@ -80,7 +80,7 @@
         
         .header-eyebrow {
             font-family: var(--font-body);
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.2em;
@@ -351,12 +351,7 @@
             letter-spacing: -0.02em; 
             line-height: 1; 
             margin-bottom: 8px;
-            background: var(--gold-shimmer);
-            background-size: 200% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s ease-in-out infinite;
+            color: var(--text-primary);
         }
         
         .stat-label { 
@@ -625,7 +620,7 @@
         }
         
         .date-badge { 
-            font-size: 11px; 
+            font-size: 12px; 
             color: var(--text-tertiary); 
             font-weight: 500; 
             letter-spacing: 0.01em; 
@@ -672,17 +667,17 @@
         }
         
         .score-badge { 
-            font-family: var(--font-display);
-            font-size: 28px; 
+            font-family: var(--font-body);
+            font-size: 16px; 
             font-weight: 600; 
-            letter-spacing: -0.02em; 
+            letter-spacing: -0.01em; 
             line-height: 1; 
-            color: var(--gold-dark);
+            color: var(--text-tertiary);
         }
         
         .score-denominator { 
-            font-size: 16px; 
-            color: var(--text-tertiary); 
+            font-size: 13px; 
+            color: var(--text-muted); 
             font-weight: 400; 
         }
 
@@ -843,8 +838,9 @@
         }
         
         .metric-label { 
-            font-size: 10px; 
+            font-size: 12px; 
             text-transform: uppercase; 
+<<<<<<< HEAD
             letter-spacing: 0.1em; 
             color: var(--text-tertiary); 
             margin-bottom: 4px; 
@@ -854,6 +850,17 @@
         .metric-value { 
             font-family: var(--font-display);
             font-size: 18px; 
+=======
+            letter-spacing: 0.03em; 
+            color: var(--text-secondary); 
+            margin-bottom: 6px; 
+            font-weight: 600; 
+        }
+        
+        .metric-value { 
+            font-family: var(--font-body);
+            font-size: 20px; 
+>>>>>>> f4a45e6 (Apply readability fixes to dashboard.html and add style-lock.md documentation)
             font-weight: 600; 
             font-variant-numeric: tabular-nums; 
             letter-spacing: -0.01em;
@@ -862,12 +869,7 @@
         }
         
         .metric-value.gold {
-            background: var(--gold-shimmer);
-            background-size: 200% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s ease-in-out infinite;
+            color: var(--text-primary);
         }
         
         .recurring-indicator { 
@@ -913,7 +915,7 @@
         }
         
         .urgency-explanation { 
-            font-size: 11px; 
+            font-size: 12px; 
             color: var(--text-tertiary); 
             margin-bottom: 12px; 
             padding-left: 4px; 
@@ -949,9 +951,9 @@
         }
         
         .seo-title { 
-            font-size: 11px; 
+            font-size: 12px; 
             text-transform: uppercase; 
-            letter-spacing: 0.1em; 
+            letter-spacing: 0.03em; 
             color: var(--gold-dark); 
             font-weight: 700; 
         }
@@ -990,10 +992,10 @@
         }
         
         .seo-metric-label { 
-            font-size: 10px; 
+            font-size: 12px; 
             text-transform: uppercase; 
-            letter-spacing: 0.08em; 
-            color: var(--text-tertiary); 
+            letter-spacing: 0.03em; 
+            color: var(--text-secondary); 
             font-weight: 600; 
             line-height: 1.4; 
         }
@@ -1016,7 +1018,7 @@
         }
         
         .seo-verification { 
-            font-size: 11px; 
+            font-size: 12px; 
             color: var(--text-tertiary); 
             font-style: italic; 
             text-align: center; 
@@ -1068,10 +1070,10 @@
         }
         
         .domain-label { 
-            font-size: 10px; 
+            font-size: 12px; 
             text-transform: uppercase; 
-            letter-spacing: 0.1em; 
-            color: var(--text-tertiary); 
+            letter-spacing: 0.03em; 
+            color: var(--text-secondary); 
             margin-bottom: 8px; 
             font-weight: 700; 
         }
@@ -1125,9 +1127,9 @@
         }
         
         .action-label { 
-            font-size: 11px; 
+            font-size: 12px; 
             text-transform: uppercase; 
-            letter-spacing: 0.08em; 
+            letter-spacing: 0.03em; 
             color: var(--gold-dark); 
             font-weight: 700; 
         }
@@ -1172,13 +1174,18 @@
             position: absolute; 
             left: 0; 
             top: 0; 
+<<<<<<< HEAD
             width: 18px; 
             height: 18px; 
+=======
+            width: 22px; 
+            height: 22px; 
+>>>>>>> f4a45e6 (Apply readability fixes to dashboard.html and add style-lock.md documentation)
             border-radius: 50%; 
             background: var(--gold-soft); 
             color: var(--gold-dark); 
             border: 1px solid var(--border-gold);
-            font-size: 10px; 
+            font-size: 12px; 
             font-weight: 700; 
             display: flex; 
             align-items: center; 
@@ -1232,6 +1239,61 @@
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Collapsible Sections */
+        details {
+            margin-bottom: 16px;
+        }
+        
+        details summary {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: var(--surface-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+        
+        details summary:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+        }
+        
+        details[open] summary {
+            margin-bottom: 12px;
+        }
+        
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        details summary::before {
+            content: '▸';
+            font-size: 14px;
+            transition: transform 0.2s ease;
+        }
+        
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 <body>
@@ -1363,7 +1425,7 @@
                 `<svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="#b54242" stroke-width="2.5"><path d="M6 18L18 6M6 6l12 12"/></svg> No`;
             
             const locationReasoning = op.location_reasoning || `Location selected based on market size and niche fit. Location fit score: ${(op.location_fit || 1.0).toFixed(1)}`;
-            const penaltyWarning = op.penalty_reason ? `<div style="color: #b54242; font-size: 11px; margin-top: 4px;">⚠️ ${op.penalty_reason}</div>` : '';
+            const penaltyWarning = op.penalty_reason ? `<div style="color: #b54242; font-size: 12px; margin-top: 4px;">⚠️ ${op.penalty_reason}</div>` : '';
             
             return `<div class="opportunity-card" data-status="${status.toLowerCase()}" data-id="${id}" data-batch-week="${op.batch_week || 0}" data-score="${op.adjusted_score || op.opportunity_score || 0}" style="animation-delay: ${Math.min(rank * 0.03, 0.5)}s">
                 <div class="card-header">
@@ -1385,61 +1447,6 @@
                     ${op.city}
                 </div>
                 
-                <div class="keyword-row" style="margin: 8px 0; padding: 6px 10px; background: rgba(0,0,0,0.3); border-radius: 6px; border-left: 3px solid #3b82f6;">
-                    <div style="font-size: 10px; text-transform: uppercase; color: #888; margin-bottom: 2px;">Target Keyword</div>
-                    <div style="font-size: 13px; font-weight: 600; color: #e0e0e0; font-family: 'SF Mono', monospace;">"${op.main_keyword || op.niche + ' ' + op.city}"</div>
-                </div>
-                
-                <div class="activity-tracker">
-                    <button class="activity-btn call" onclick="alert('Call tracking: ' + '${op.city} ${op.niche}')" title="Log a call activity">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.94 12.94 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.94 12.94 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                        Call
-                    </button>
-                    <button class="activity-btn email" onclick="alert('Email tracking: ' + '${op.city} ${op.niche}')" title="Log an email activity">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        Email
-                    </button>
-                    <button class="activity-btn notes" onclick="alert('Notes for: ' + '${op.city} ${op.niche}')" title="Add notes">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                        Notes
-                    </button>
-                </div>
-                
-                <div class="location-confidence" title="Location fit: ${(op.location_fit || 1.0).toFixed(2)}">
-                    <span class="confidence-label ${confidence.class}">${confidence.label}</span>
-                    <div class="confidence-bar">
-                        <div class="confidence-fill" style="width: ${confidence.width}; background: ${confidence.color};"></div>
-                    </div>
-                    ${penaltyWarning}
-                </div>
-                
-                <div class="location-reasoning">
-                    <details>
-                        <summary>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                            Why This Location
-                        </summary>
-                        <div class="location-reasoning-content">${locationReasoning}</div>
-                    </details>
-                </div>
-                
-                <div class="status-row">
-                    <select class="status-select" data-id="${id}" onchange="updateStatus(this)">
-                        <option value="New" ${status === 'New' ? 'selected' : ''}>New</option>
-                        <option value="Researching" ${status === 'Researching' ? 'selected' : ''}>Researching</option>
-                        <option value="Building" ${status === 'Building' ? 'selected' : ''}>Building</option>
-                        <option value="Live" ${status === 'Live' ? 'selected' : ''}>Live</option>
-                        <option value="Rented" ${status === 'Rented' ? 'selected' : ''}>Rented</option>
-                        <option value="Paused" ${status === 'Paused' ? 'selected' : ''}>Paused</option>
-                        <option value="Declined" ${status === 'Declined' ? 'selected' : ''}>Declined</option>
-                    </select>
-                </div>
-                
-                <div class="priority-row">
-                    <div class="priority-dot" style="background: ${op.priority === 'Start Now' ? '#2d7d46' : op.priority === 'Research Further' ? '#a88420' : '#8a8a8a'};"></div>
-                    <span class="priority-badge">${op.priority || 'Monitor'}</span>
-                </div>
-                
                 <div class="metrics">
                     <div class="metric" title="Estimated monthly rental fee you can charge">
                         <div class="metric-label">Monthly Fee</div>
@@ -1459,91 +1466,128 @@
                     </div>
                 </div>
                 
-                <div class="score-breakdown" style="margin: 12px 0; padding: 10px; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="font-size: 10px; text-transform: uppercase; color: #888; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
-                        <span>Score Breakdown</span>
-                        <span style="color: #666;">Total: ${(op.adjusted_score || op.opportunity_score || 0).toFixed(1)}/10</span>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
-                        <div class="score-item" title="Base opportunity score before adjustments">
-                            <span style="color: #888; font-size: 11px;">Base Score</span>
-                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(op.opportunity_score || 0).toFixed(1)}</span>
-                        </div>
-                        <div class="score-item" title="Location match quality (1.0 = perfect)">
-                            <span style="color: #888; font-size: 11px;">Location Fit</span>
-                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(op.location_fit || 1.0).toFixed(2)}</span>
-                        </div>
-                        <div class="score-item" title="How quickly customers need this service (10 = emergency)">
-                            <span style="color: #888; font-size: 11px;">Urgency</span>
-                            <span style="color: ${urgencyColor}; font-size: 12px; font-weight: 600;">${urgency}/10</span>
-                        </div>
-                        <div class="score-item" title="Monthly searches for main keyword">
-                            <span style="color: #888; font-size: 11px;">Search Volume</span>
-                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(seo.search_volume || 0).toLocaleString()}/mo</span>
-                        </div>
-                        <div class="score-item" title="How hard to rank (0-100, lower is easier)">
-                            <span style="color: #888; font-size: 11px;">Keyword Difficulty</span>
-                            <span style="color: ${seoColor}; font-size: 12px; font-weight: 600;">${seo.keyword_difficulty || 'N/A'}</span>
-                        </div>
-                        <div class="score-item" title="Competitor Domain Authority (lower = easier to beat)">
-                            <span style="color: #888; font-size: 11px;">Competitor DA</span>
-                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.competitor_da || 'N/A'}</span>
-                        </div>
-                        <div class="score-item" title="Content gap opportunity (higher = more room to win)">
-                            <span style="color: #888; font-size: 11px;">Content Gap</span>
-                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.content_gap_score || 'N/A'}</span>
-                        </div>
-                        <div class="score-item" title="Google Maps competition level">
-                            <span style="color: #888; font-size: 11px;">Competition</span>
-                            <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.competition_level || 'N/A'}</span>
-                        </div>
-                    </div>
+                <div class="status-row">
+                    <select class="status-select" data-id="${id}" onchange="updateStatus(this)">
+                        <option value="New" ${status === 'New' ? 'selected' : ''}>New</option>
+                        <option value="Researching" ${status === 'Researching' ? 'selected' : ''}>Researching</option>
+                        <option value="Building" ${status === 'Building' ? 'selected' : ''}>Building</option>
+                        <option value="Live" ${status === 'Live' ? 'selected' : ''}>Live</option>
+                        <option value="Rented" ${status === 'Rented' ? 'selected' : ''}>Rented</option>
+                        <option value="Paused" ${status === 'Paused' ? 'selected' : ''}>Paused</option>
+                        <option value="Declined" ${status === 'Declined' ? 'selected' : ''}>Declined</option>
+                    </select>
                 </div>
                 
-                <div class="urgency-row">
-                    <span class="urgency-label">Urgency: ${urgency}/10</span>
-                    <div class="urgency-bar">
-                        <div class="urgency-fill" style="width: ${urgencyPct}%; background: ${urgencyColor};"></div>
-                    </div>
+                <div class="priority-row">
+                    <div class="priority-dot" style="background: ${op.priority === 'Start Now' ? '#2d7d46' : op.priority === 'Research Further' ? '#a88420' : '#8a8a8a'};"></div>
+                    <span class="priority-badge">${op.priority || 'Monitor'}</span>
                 </div>
+                
+                <details>
+                    <summary>Target Keyword & Actions</summary>
+                    <div class="keyword-row" style="margin: 12px 0; padding: 8px 12px; background: var(--surface-warm); border-radius: 8px; border-left: 3px solid var(--gold);">
+                        <div style="font-size: 12px; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 4px; font-weight: 600; letter-spacing: 0.03em;">Target Keyword</div>
+                        <div style="font-size: 14px; font-weight: 600; color: var(--text-primary); font-family: var(--font-body);">"${op.main_keyword || op.niche + ' ' + op.city}"</div>
+                    </div>
+                    <div class="activity-tracker">
+                        <button class="activity-btn call" onclick="alert('Call tracking: ' + '${op.city} ${op.niche}')" title="Log a call activity">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.94 12.94 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.94 12.94 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            Call
+                        </button>
+                        <button class="activity-btn email" onclick="alert('Email tracking: ' + '${op.city} ${op.niche}')" title="Log an email activity">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            Email
+                        </button>
+                        <button class="activity-btn notes" onclick="alert('Notes for: ' + '${op.city} ${op.niche}')" title="Add notes">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                            Notes
+                        </button>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>Score Breakdown (${(op.adjusted_score || op.opportunity_score || 0).toFixed(1)}/10)</summary>
+                    <div class="score-breakdown" style="margin: 12px 0; padding: 10px; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                            <div class="score-item" title="Base opportunity score before adjustments">
+                                <span style="color: #888; font-size: 12px;">Base Score</span>
+                                <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(op.opportunity_score || 0).toFixed(1)}</span>
+                            </div>
+                            <div class="score-item" title="Location match quality (1.0 = perfect)">
+                                <span style="color: #888; font-size: 12px;">Location Fit</span>
+                                <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(op.location_fit || 1.0).toFixed(2)}</span>
+                            </div>
+                            <div class="score-item" title="How quickly customers need this service (10 = emergency)">
+                                <span style="color: #888; font-size: 12px;">Urgency</span>
+                                <span style="color: ${urgencyColor}; font-size: 12px; font-weight: 600;">${urgency}/10</span>
+                            </div>
+                            <div class="score-item" title="Monthly searches for main keyword">
+                                <span style="color: #888; font-size: 12px;">Search Volume</span>
+                                <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${(seo.search_volume || 0).toLocaleString()}/mo</span>
+                            </div>
+                            <div class="score-item" title="How hard to rank (0-100, lower is easier)">
+                                <span style="color: #888; font-size: 12px;">Keyword Difficulty</span>
+                                <span style="color: ${seoColor}; font-size: 12px; font-weight: 600;">${seo.keyword_difficulty || 'N/A'}</span>
+                            </div>
+                            <div class="score-item" title="Competitor Domain Authority (lower = easier to beat)">
+                                <span style="color: #888; font-size: 12px;">Competitor DA</span>
+                                <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.competitor_da || 'N/A'}</span>
+                            </div>
+                            <div class="score-item" title="Content gap opportunity (higher = more room to win)">
+                                <span style="color: #888; font-size: 12px;">Content Gap</span>
+                                <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.content_gap_score || 'N/A'}</span>
+                            </div>
+                            <div class="score-item" title="Google Maps competition level">
+                                <span style="color: #888; font-size: 12px;">Competition</span>
+                                <span style="color: #e0e0e0; font-size: 12px; font-weight: 600;">${seo.competition_level || 'N/A'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>Why This Location</summary>
+                    <div class="location-reasoning-content">${locationReasoning}</div>
+                </details>
                 
                 ${op.notes ? `<div class="notes">${op.notes}</div>` : ''}
                 
-                <div class="seo-section">
-                    <div class="seo-header">
-                        <span class="seo-title">SEO Metrics</span>
-                        <span class="seo-badge" style="background: ${seoColor}15; color: ${seoColor}; border: 1px solid ${seoColor}40;" title="Composite score based on keyword difficulty, search volume, competitor strength, content gap, and competition level. Higher = easier to rank.">Score: ${seoScore}</span>
+                <details>
+                    <summary>SEO Metrics (Score: ${seoScore})</summary>
+                    <div class="seo-section">
+                        <div class="seo-grid">
+                            <div class="seo-metric" title="How hard it is to rank for the main keyword (0-100). Lower is easier.">
+                                <div class="seo-metric-value">${seo.keyword_difficulty || 'N/A'}</div>
+                                <div class="seo-metric-label">Keyword Difficulty</div>
+                            </div>
+                            <div class="seo-metric" title="Estimated monthly searches for the main keyword. Higher = more potential leads.">
+                                <div class="seo-metric-value">${seo.search_volume || 'N/A'}</div>
+                                <div class="seo-metric-label">Search Volume</div>
+                            </div>
+                            <div class="seo-metric" title="Domain Authority of top competitors. Lower = easier to outrank.">
+                                <div class="seo-metric-value">${seo.competitor_da || 'N/A'}</div>
+                                <div class="seo-metric-label">Competitor DA</div>
+                            </div>
+                            <div class="seo-metric" title="How much content is missing from competitors. Higher = more opportunity to create valuable content.">
+                                <div class="seo-metric-value">${seo.content_gap_score || 'N/A'}</div>
+                                <div class="seo-metric-label">Content Gap</div>
+                            </div>
+                        </div>
+                        <div class="seo-details">
+                            <div class="seo-detail" title="How saturated the Google Maps results are"><span class="seo-detail-label">Competition:</span> ${seo.competition_level || 'N/A'}</div>
+                            <div class="seo-detail" title="Estimated backlinks needed to rank"><span class="seo-detail-label">Backlinks:</span> ${seo.backlink_estimate || 'N/A'}</div>
+                            <div class="seo-detail" title="Number of businesses in Google Maps pack"><span class="seo-detail-label">Map Pack:</span> ${seo.map_pack_status || 'N/A'}</div>
+                        </div>
+                        <div class="seo-verification">⚠️ Estimated metrics — verify with Ahrefs/Mangools</div>
                     </div>
-                    <div class="seo-grid">
-                        <div class="seo-metric" title="How hard it is to rank for the main keyword (0-100). Lower is easier.">
-                            <div class="seo-metric-value">${seo.keyword_difficulty || 'N/A'}</div>
-                            <div class="seo-metric-label">Keyword Difficulty</div>
-                        </div>
-                        <div class="seo-metric" title="Estimated monthly searches for the main keyword. Higher = more potential leads.">
-                            <div class="seo-metric-value">${seo.search_volume || 'N/A'}</div>
-                            <div class="seo-metric-label">Search Volume</div>
-                        </div>
-                        <div class="seo-metric" title="Domain Authority of top competitors. Lower = easier to outrank.">
-                            <div class="seo-metric-value">${seo.competitor_da || 'N/A'}</div>
-                            <div class="seo-metric-label">Competitor DA</div>
-                        </div>
-                        <div class="seo-metric" title="How much content is missing from competitors. Higher = more opportunity to create valuable content.">
-                            <div class="seo-metric-value">${seo.content_gap_score || 'N/A'}</div>
-                            <div class="seo-metric-label">Content Gap</div>
-                        </div>
-                    </div>
-                    <div class="seo-details">
-                        <div class="seo-detail" title="How saturated the Google Maps results are"><span class="seo-detail-label">Competition:</span> ${seo.competition_level || 'N/A'}</div>
-                        <div class="seo-detail" title="Estimated backlinks needed to rank"><span class="seo-detail-label">Backlinks:</span> ${seo.backlink_estimate || 'N/A'}</div>
-                        <div class="seo-detail" title="Number of businesses in Google Maps pack"><span class="seo-detail-label">Map Pack:</span> ${seo.map_pack_status || 'N/A'}</div>
-                    </div>
-                    <div class="seo-verification">⚠️ Estimated metrics — verify with Ahrefs/Mangools</div>
-                </div>
+                </details>
                 
-                <div class="domain-suggestions">
-                    <div class="domain-label">Domain Ideas</div>
-                    <div class="domain-tags">${domainsHtml}</div>
-                </div>
+                <details>
+                    <summary>Domain Ideas</summary>
+                    <div class="domain-suggestions">
+                        <div class="domain-tags">${domainsHtml}</div>
+                    </div>
+                </details>
                 
                 <div class="action-plan" data-expanded="false">
                     <div class="action-plan-header">
