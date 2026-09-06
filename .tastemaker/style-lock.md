@@ -103,6 +103,30 @@ Visual scan path must be:
 - Keep card hover lift
 - Remove infinite shimmer loops on numbers
 
+## Icon & Accent Colors
+
+### Icon Colors
+- Icons paired with text (e.g., location pin) must use `--text-secondary` or darker
+- NO gold icons on light backgrounds unless ≥16px and serving as visual accent (not paired with small text)
+- Icon opacity: 0.8 for subtle presence without disappearing
+
+### Inline Panels & Sections
+- NO dark theme colors (`rgba(0,0,0,...)`, `#888`, `#e0e0e0`) in light theme
+- All panels use paper/ink: `var(--surface-warm)` background, `var(--text-primary)` values, `var(--text-secondary)` labels
+- Border: `var(--border)` (never white/light borders on light backgrounds)
+
+## Mobile Responsiveness
+
+### Filter Bar
+- Reduce padding on mobile: 20px → 16px @ 768px, → 12px @ 480px
+- Reduce button size: padding 8/18px → 7/14px @ 768px, → 6/12px @ 480px
+- Font size: 13px → 12px on mobile
+
+### Stats KPI Bar
+- Desktop: 5-column grid
+- Tablet (768px): 3-column grid to prevent orphaned items
+- Mobile (480px): 2-column grid
+
 ## Testing Checklist
 
 Before publishing changes:
@@ -114,6 +138,9 @@ Before publishing changes:
 - [ ] Data and interactions still work
 - [ ] Gold text only at ≥14px with verified contrast
 - [ ] `prefers-reduced-motion` honored
+- [ ] NO dark theme colors in light theme panels
+- [ ] Icons use text-secondary (not gold) when paired with text
+- [ ] Mobile: filters don't wrap excessively, KPIs distribute well
 
 ---
 
